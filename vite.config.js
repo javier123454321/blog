@@ -11,7 +11,8 @@ export default defineConfig({
       input: {
         404: resolve(__dirname, '_site', '404.html'),
         main: resolve(__dirname, '_site', 'index.html'),
-        about: resolve(__dirname, '_site', 'about', 'index.html'),
+        blog: resolve(__dirname, '_site', 'blog', 'index.html'),
+        blogPost: resolve(__dirname, '_site', 'blog post', 'blogpost.html'),
       },
     },
     emptyOutDir: true,

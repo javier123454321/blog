@@ -1,16 +1,22 @@
 const fs = require('fs');
 
-module.exports = function (config) {
-  config.setLiquidOptions({
+module.exports = function (eleventyConfig) {
+
+  eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
   });
 
   // Static assets to pass through
-  config.addPassthroughCopy('./src/images');
-  config.addPassthroughCopy('./src/public');
-  config.addPassthroughCopy('./src/styles');
-  config.addPassthroughCopy('./src/main.js');
-
+  eleventyConfig.addPassthroughCopy('./src/images');
+  eleventyConfig.addPassthroughCopy('./src/public');
+  eleventyConfig.addPassthroughCopy('./src/styles');
+  eleventyConfig.addPassthroughCopy('./src/main.js');
+  eleventyConfig.addCollection("filteredBySociety", function(collectionApi) {
+    const collection = collectionApi.getAll().filter(function filterNonSociety(item) {
+      return item.data.topics.includes('society')
+    })
+    return collection
+  });
   return {
     dir: {
       input: 'src',

@@ -1,33 +1,29 @@
 ---
+eleventyExcludeFromCollections: true
 layout: 'layouts/home.html'
 title: 'Home'
 meta:
   desc:
-    '11st-Starter-Kit is a minimal starting point for building static websites
-    with 11ty, powered by Vite with Tailwind CSS and Alpine.js.'
-intro:
-  title: 'Welcome to Your Eleventy App'
-  desc:
-    'For a guide and recipes on how to configure / customize this project, check
-    out the <a href="https://www.11ty.dev/docs/" class="text-gray-900
-    font-medium underline">Eleventy</a> and <a href="https://vitejs.dev/"
-    class="text-gray-900 font-medium underline">Vite</a> documentation.'
+    'Just the thoughts of a person, seldom updated'
 ---
 
-## Community
-
-[Eleventy](https://www.11ty.dev/news/discord/) -
-[Vite](https://chat.vitejs.dev/) - [Tailwind
-CSS](https://tailwindcss.com/discord) - [Alpine.js](https://discord.gg/CGmj5nq)
-
-## Awesome
-
-[Eleventy](https://github.com/scottishstoater/awesome-eleventy) -
-[Vite](https://github.com/vitejs/awesome-vite) - [Tailwind
-CSS](https://github.com/aniftyco/awesome-tailwindcss) -
-[Alpine.js](https://github.com/alpine-collective/awesome)
-
-## Ecosystem
-
-[Eleventy](https://www.11ty.dev/) - [Vite](https://vitejs.dev/) -
-[Tailwind CSS](https://tailwindcss.com/) - [Alpine.js](https://github.com/alpinejs/alpine/)
+  <div class="w-screen bg-gray-800 py-12">
+    <h1 class="text-3xl font-bold leading-tight text-white text-right {{width}}">
+      Musings by Javier Gonzalez
+    </h1>
+  </div>
+  <div class="py-8 leading-8 {{ width }}">
+    <h2 class="text-xl font-black">Featured Posts:</h2>
+    <ul>
+    {%- for post in collections.main -%}
+    <a href="{{ post.filePathStem }}/">
+      <li class="px-4 py-4 my-4 bg-slate-100 hover:bg-sky-200 transition-colors rounded-lg">
+        <div class="flex justify-between ">
+          {{ post.data.title }}
+          <span x-data="{ date: '{{ post.date }}' }" x-text="() => new Date(date).toLocaleDateString()"></span>
+        </div>
+      </li>
+    </a>
+    {%- endfor -%}
+    </ul>
+  </div>

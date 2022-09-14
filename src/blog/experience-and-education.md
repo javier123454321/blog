@@ -1,0 +1,69 @@
+---
+layout: 'layouts/blogpost.html'
+title: 'Experience and Education'
+date: '2020-11-16'
+tags: ['musing']
+topics: ['pedagogy']
+meta:
+  desc: "How is education tied to experience? The difference between theory and practice"
+intro:
+  title: 'Experience and Education'
+  description: 'Doing is what you do in order to learn, learning is not what you do in order to do.'
+---
+
+Around the year 1,000 a.d. there was a legendary person named Naropa in India. He was an incredible intellectual, and was an absolute genius at debating. He spent much of his youth memorizing the words to traditional buddhist texts, and was the keeper of the Northern Gate of the greatest university at the time, Nalanda. Legend says that he one day a dakini appeared and asked him if he understood the words of the dharma (buddhas teachings). He answered that he did, and that he understood the meaning as well. This made the dakini cry, and she called him a scholar but also a liar, as he did not understand what he was reading, and told him to look for Tilopa, who was the only one who understood. We’ll come back to this story later.
+
+## Education today
+What is our approach to education today? In our educational institutions, we create a “safe space” for students to come together, and have a professor talk about something at them for hours, to which they will get tested on. This has been the case for over a century.
+
+Is that still the predominant mode?
+
+Does that seem right?
+
+The proper question would be, what does it mean to learn something? What does “knowing about something” mean? Truth is that education today is clearly seen as insufficient in most cases, overly theoretical and largely divorced from the real experiences that professionals have when working in the field of study. This is true in 2020, and apparently it was true in 1920. The craziest part is that we have known for over a century that our model of instruction is faulty, yet it still predominates our academic institutions.
+
+So what would new education look like? In 1938, when Dewey released his book titled “Experience and Education”, there seemed to be a wave of progressive schools that taught kids in environments much more akin to playing than classrooms. He maintained that the new form of progressive education was not rooted in first principles, but simply positioned themselves in opposition to the traditional model. The book was an attempt at constructing a theory of experience and learning from first principles, not just creating an opposing view of traditional education.
+
+## Starting From First Principles
+So what is a theory of experience, especially as it relates to education? We know that everything that we do is learned from experience, and especially direct experience of the subject matter at hand. This is why doctors, lawyers, architects, engineers need to practice professionally before becoming licensed. There is a responsibility in these professions – they can be responsible for people’s lives- and giving people a degree is simply seen as a step towards the actual learning that takes place in practice.
+
+This is the case because we understand what Dewey was trying to tell us, that as long as we don’t do the thing, we won’t know how to do the thing.
+
+So, we can recognize experience as something useful, but then we have to discern what kind of experience has the most utility. Because even if we have some experiences that are useful for learning, the experiences that we are having in schools are clearly not the best for learning and understanding.
+
+## What is useful about experience
+All of our experiences live in a continuum of an ever expanding present moment. All of our yesterdays are used to create all of our tomorrows, and this is always done today. And in each moment, we can interact with our environment. In doing so, we define what we will become. Every interaction modifies the experiences, and therefore the quality of subsequent experiences. Everything that we do creates a habit in us, and it will nudge us in the future in a direction. We are, after all, a collection of our habits.
+
+There are experiences that close us off from the richness of the future, and experiences that opens up possibilities for more, rich, beautiful future experiences. Take a child finding a book and engaging with it, it can be the window towards a world of possibilities. The same child might become a thief, an athlete, or a scientist. It is not to categorize as one of those being better than the other, simply to say that each experience is propelling us forward and shaping our future.
+
+This is why learning is such a useful experience and an important thing to get right. Learning something new can reveal a world of ideas, authors, people, friends, places, objects, and thoughts that you did not even know existed. Learning allows us to multiply the quality of the future moments we will experience, and the possibilities that a new moment might provide.
+
+Students interact with the world and string together these interactions moving towards the future. The raw materials that teachers can play with are: the context where students will be and the interactions that they will have with this context. The experience of the students is the place to optimize, and that must be taken into account with as much involvement with the greater social, historical, economic, cultural, and technological progress. Practically, this looks like field studies, internships, attempting something and seeing the consequences of it.
+
+Today in school, much as it was 100 years ago, students memorize History, Arithmetic, Geography, Language, etc, in situations which are completely devoid of any resemblance to how their application might look like. We just assume that this bank of knowledge will be applied at some point in the future. And even though the subjects might be useful, the experience of acquiring them in a completely artificial setting is not conducive to how we build on past experiences. We might be able to recall the masses of information that we had memorized, if we go to a situation that resembles the conditions which we acquired it. Learning facts is only useful for regurgitating facts, not to creating connections with the greater questions that actually produce understanding.
+
+(As an aside, the evidence today strongly points towards creating connections with new ideas to old ones for them to stick. The more that a new thought is related to other thoughts in your brain, the more likely you are to remember it and find it useful)
+
+What we want to produce in an educational system, are people that can draw from the present moment all the necessary context to solve problems. People that can exploit every situation to be a tool for learning, and for this curious disposition to be with them into all future experiences. If we make the lessons in school about being able to think about our context, and take the most advantage of its possibilities, it will create students with an ability to do that in future moments. Instead, we tend to abstract the context of learning things to the memorization and regurgitation of facts, which can actually create resentment towards these subjects.
+
+## What is the role of the teacher?
+A subject cannot be taught, no matter how much knowledge a person has, it cannot be transferred to a student if the student does not have any experience of the material at hand. No matter how much theory that you provide someone about center of gravity and moment of inertia, you cannot learn to ride a bike through lectures.
+
+Planning and structuring is the role of the teacher, but in a way that the material will be there for the student to discover its meaning through work and play. Learning is the lesson that the teacher is trying to instill in the pupil. Because knowledge and wisdom cannot be taught, all of learning is a process of discovering for ourselves how to behave, what holds true in different situations, what brings desirable results and what does not. The teacher has these experiences already, and has to create the conditions for the student to gain these experiences for themselves.
+
+The teacher has to instill a desire for learning, tied to the motivations of the student. Desire turns into someone’s purpose when they start to consider all the things that must happen to achieve that desire. If you want a house, you have to plan the house, gather the money, materials, designs, permits etc, then build the thing. Through achieving a thing we arrive at the experience of having achieved that, and that is when learning happens. Desire can and should be used to motivate the execution of something and give it purpose.
+
+We understand the world through navigating and interacting with it. The educator starts when the expansion of our world leaves off and tries to amplify this widening of horizons beyond our current environment. Because we all have a set of experiences that we carry with ourselves, and we are always interpreting our present in accordance with those experiences, understanding the student’s previous experiences is key to providing an education in line with what they carry with them. It is about looking at what has already been learned not as a possession but as a force and an agency towards new explorations and experiences.
+
+## It’s not about dismissing theory alltogether
+Scientific theory is actually born out of replicable experiences. They are useful as generalizations of experience but should be derived through the experience which the teacher is helping to guide in the student. The relationship between the principles, the theory, and the model is there prior to our experience, and the purpose of experience is for that relationship to reveal itself to the student through activities. Scientific education would mean solving through problems that relate to experiences that the student has had, like the interactions with trains bicycles, food, etc. All these processes are intimately intertwined with chemistry, physics, mechanics, history, language, economics, industry, culture, psychology, and all the other disciplines that we have defined as humans.
+
+The complexity of a scientific theory can be progressively revealed from these interactions, as the student’s maturity grows. Activities in school are a means to allow for the principles to reveal themselves to students and should therefore be a focus of the teachers to ensure that the right activity is being used for learning. Their purpose is to discover the same understanding that the teacher has, by the students, on their own experience. Using the scientific method to create activities for learning, we reach the importance of ideas and observation. Ideas guide the reasoning behind scientific experiments, the hypothesis that has to pass a level of scrutiny before it becomes an accurate operating assumption or generalized principle. Precise observation of the results of activities elevate mindless playing to scientific rigor.
+
+To summarize the gist of what Dewey was trying to say, is that the experience of learning something is not just better suited to absorb the material that we want students to learn, it IS the material that we want students to learn. It is not just important to provide appropriate learning experiences, and it is not in sacrifice of the material at hand. Thinking in terms of play time as something in opposition to learn time is not only incorrect, it is a fundamental misunderstanding of how we, as human’s learn. In order to provide a situation that the students will learn things, that they won’t resent the subjects being taught, that they will be able to apply the concepts in a real world setting, we need to stop making our schools so completely divorced from the real world as they are now.
+
+This approach seems extremely sensible to me. Every time I have ever tried to learn something, it was always not quite right until I tried doing it. In programming forums, I constantly encounter the adage of build something in order to learn a technology. If you want to be a writer, you need to write. If you want to be a programmer, you need to program. If you want to be a doctor, you need to practice medicine. The theory gives us a model that is born out of the experience of people that have spent time doing it before us, and it is useful insofar as we actually take the step to confirm the meaning of the words by turning them into embodied understanding through doing.
+
+Philosophical systems in the east, like the story of Naropa points to, made a distinction between the experiential and the intellectual. Naropa could recite the texts by hearts, but it was not until his teacher Tilopa put him through a series of hardships to test his commitment that he arived at the experience that the scriptures taught. This paradox is at the crux of the matter. Describing through words something that is an experience is impossible. It can be gentle nudges towards the right direction, but we will never acquire understanding, real understanding by simply studying about it on paper.
+
+Words and concepts are representations of the world. They are models that we use to narrow down, to define, to put in boxes, and to make sense the all the vastness of experience that we can have at any given moment. But they are simply that, maps, representations, models and abstractions. They cannot be the real thing, as the real thing is so vast that it cannot be defined. Every experience that we have is painted by every other experience that we have had, and all the interactions with them. To really arrive at learning, we need to integrate with a subject, and that can only be done by embarking in the journey of allowing ourselves to be transformed by them.

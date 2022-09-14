@@ -1,0 +1,33 @@
+{% layout "layouts/base.html" %} {% block content %}
+<main id="main-content" tabindex="-1">
+  <div class="w-screen bg-gray-800 py-12">
+    <h1 class="text-3xl font-bold leading-tight text-white text-right {{width}}">
+      {{ intro.title }}
+    </h1>
+  </div>
+  <div class="{{ width }}">
+    <div class="py-8 leading-8 text-gray-600">
+      <p class="text-xl">{{ intro.desc }}</p>
+    </div>
+    <div class="prose prose-lg prose-gray text-gray-500">{{ content }}</div>
+    <ul>
+      {%- for post in collections.all -%}
+      <a href="{{ post.filePathStem }}/">
+        <li class="px-4 py-4 my-4 bg-slate-100 hover:bg-sky-200 transition-colors rounded-lg">
+          <div class="flex justify-between ">
+            {{ post.data.title }}
+            <span x-data="{ date: '{{ post.date }}' }" x-text="() => new Date(date).toLocaleDateString()"></span>
+          </div>
+          <div class="flex mt-2">
+            <span class="font-black mr-2">Topics: </span>
+            {%- for tag in post.data.topics -%}
+            <span class="mr-2">{{ tag }}</span>
+            {%- endfor -%}
+          </div>
+        </li>
+      </a>
+      {%- endfor -%}
+    </ul>
+  </div>
+</main>
+{% endblock %}
