@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 .blogPost > * > * > a{
-    @apply border-b-2 border-black;
+    @apply border-b-2 border-black bg-slate-50;
 }
 .blogPost > * > a{
-    @apply border-b-2 border-black;
+    @apply border-b-2 border-black bg-slate-50;
+}
+.blogPost > blockquote {
+    @apply border-l-8 border-black bg-yellow-50 pr-3 py-1;
+}
+.blogPost > h2 {
+    @apply font-black;
+}
+.blogPost > p > code {
+    @apply p-1 bg-slate-100;
 }

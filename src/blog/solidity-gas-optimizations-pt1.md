@@ -18,15 +18,15 @@ Solidity works as a compiled language where each operation gets converted to a l
 So let's take an example:
 
 ```solidity
-    uint256 percentage = 30;
-    function splitAmountToOwnerAndSeller(uint256 amount)
-        internal
-        view
-        returns (uint256 amountForSender, uint256 amountForOwner)
-    {
-        amountForSender = (amount * (100 - percentage)) / 100;
-        amountForOwner = (amount * percentage) / 100;
-    }
+uint256 percentage = 30;
+function splitAmountToOwnerAndSeller(uint256 amount)
+    internal
+    view
+    returns (uint256 amountForSender, uint256 amountForOwner)
+{
+    amountForSender = (amount * (100 - percentage)) / 100;
+    amountForOwner = (amount * percentage) / 100;
+}
 ```
 
 This functions calculates how much ether should go to the owner and to the seller of an item. The owner gets a percentage defined by the storage variable called percentage. If we break it down into how this works, you actually need to read from the storage variable twice. In some languages that might not be a problem, however if you understand how data is stored on the blockchain, you would realize that reading the variable for amount is an in-memory operation, while reading the variable percentage is a storage operation. It is a different assembly code.
@@ -43,13 +43,13 @@ Because you do this twice, you would end up spending 1600 gas on reading this va
 So, the code would look like this:
 
 ```solidity
-    uint256 percentage = 30;
-    function splitAmountToOwnerAndSeller(uint256 amount) internal view returns (uint256 amountForSender, uint256 amountForOwner)
-    {
-        uint256 ownerPercentage = percentage;
-        amountForSender = (amount * (100 - ownerPercentage)) / 100;
-        amountForOwner = (amount * ownerPercentage) / 100;
-    }
+uint256 percentage = 30;
+function splitAmountToOwnerAndSeller(uint256 amount) internal view returns (uint256 amountForSender, uint256 amountForOwner)
+{
+    uint256 ownerPercentage = percentage;
+    amountForSender = (amount * (100 - ownerPercentage)) / 100;
+    amountForOwner = (amount * ownerPercentage) / 100;
+}
 ```
 
 This is especially necessary when you are dealing with loops that read from state regularly, always cast a state variable to memory before entering a loop.
