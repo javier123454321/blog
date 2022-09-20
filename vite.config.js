@@ -2,17 +2,36 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 const { resolve } = require('path');
+const fs = require('fs');
 
+function generateInputOption() {
+  let input = {
+    404: resolve(__dirname, '_site', '404.html'),
+    main: resolve(__dirname, '_site', 'index.html'),
+    blog: resolve(__dirname, '_site', 'blog', 'index.html'),
+  };
+  const paths = fs
+    .readdirSync('_site/blog', { withFileTypes: false })
+    .filter(function isNotAFileType(dir) {
+      return dir.search('.html') === -1;
+    });
+  paths.forEach((element) => {
+    input['blog/' + element] = resolve(
+      __dirname,
+      '_site',
+      'blog',
+      element,
+      'index.html',
+    );
+  });
+  return input;
+}
 export default defineConfig({
   root: '_site',
   build: {
-    outDir: '../dist',
+    outDir: './dist',
     rollupOptions: {
-      input: {
-        404: resolve(__dirname, '_site', '404.html'),
-        main: resolve(__dirname, '_site', 'index.html'),
-        blog: resolve(__dirname, '_site', 'blog', 'index.html'),
-      },
+      input: generateInputOption(),
     },
     emptyOutDir: true,
   },
