@@ -12,7 +12,6 @@ export default defineConfig({
         404: resolve(__dirname, '_site', '404.html'),
         main: resolve(__dirname, '_site', 'index.html'),
         blog: resolve(__dirname, '_site', 'blog', 'index.html'),
-        blogPost: resolve(__dirname, '_site', 'blogpost', 'blogpost.html'),
       },
     },
     emptyOutDir: true,
