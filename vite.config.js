@@ -17,6 +17,7 @@ function generateInputOption() {
     });
   console.log({ paths });
   paths.forEach((element) => {
+    element = element.split('.')[0];
     input['blog/' + element] = resolve(
       __dirname,
       '_site',
