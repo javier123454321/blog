@@ -11,10 +11,11 @@ function generateInputOption() {
     blog: resolve(__dirname, '_site', 'blog', 'index.html'),
   };
   const paths = fs
-    .readdirSync('_site/blog', { withFileTypes: false })
+    .readdirSync('src/blog', { withFileTypes: false })
     .filter(function isNotAFileType(dir) {
       return dir.search('.html') === -1;
     });
+  console.log({ paths });
   paths.forEach((element) => {
     input['blog/' + element] = resolve(
       __dirname,
