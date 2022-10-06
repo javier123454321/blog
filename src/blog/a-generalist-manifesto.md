@@ -37,7 +37,7 @@ Let's venture to the world that is unknown, that is impossible to comprehend, an
 
 <a name="note1">**1.**</a> It is easier only in the fact that there is a prescribed way to put in effort and get a result if you specialize. The effort needed is enormous, and I do not intend to make it sound like it is effortless. I do think, however, that it can be easy to waste close to a decade in creating research that will only ever be relevant to the 3 other people that are aware of the topic at this level, and that you will spend the rest of your academic career arguing with until one of you dies. [[Back]](#ref1)
 
-<a name="note2">**2.**</a> This is why we end up with thesis' titles that sound like "The evolution of the west indie variant of the proto indo european language during the Poneysian drought of 311 to 315". [Back]()[[Back]](#ref2)
+<a name="note2">**2.**</a> This is why we end up with thesis' titles that sound like "The evolution of the west indie variant of the proto indo european language during the Poneysian drought of 311 to 315". [[Back]](#ref2)
 
 <a name="note3">**3.**</a> The Santa Fe Institute, for example is a model to follow for lateral, widespread, interdisciplinary thinking.[[Back]](#ref3)
 

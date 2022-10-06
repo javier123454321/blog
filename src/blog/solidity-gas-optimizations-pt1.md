@@ -35,7 +35,7 @@ This functions calculates how much ether should go to the owner and to the selle
 Whenever you read the variable percentage you are getting data from the blockchain database (A network of computers that each have to validate that piece of data), and this is done through an opco called SLOAD which according to the Ethereum Yellow Paper costs 800 gas to execute:
 
 <div class="flex justify-center">
-    <img src="/images/sgo1.png">
+    <img src="/images/sgo1.png" alt="A snapshot of the Ethereum yellow paper">
 </div>
 
 Because you do this twice, you would end up spending 1600 gas on reading this variable. To combat that, you could always store the object in memory, and load it from there, which is much cheaper (around 3 gas). So what you could do is write from storage to memory once (SLOAD + MSTORE) = 803 gas, then read the memory variable twice (MLOAD + MLOAD) = 6 gas, for an almost 50% gas reduction for that transaction (1).
