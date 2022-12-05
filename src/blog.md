@@ -12,7 +12,7 @@ intro:
   <div class="{{ width }}">
     <ul class="grid grid-cols-1 gap-8 justify-around">
       {%- for post in collections.all -%}
-        {% render "partials/content-card.html", post: post, details:true %}
+        {% render "partials/content-card.liquid", post: post, show_tags: true %}
       {%- endfor -%}
     </ul>
   </div>

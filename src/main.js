@@ -19,3 +19,16 @@ if ('serviceWorker' in navigator && env === 'production') {
     }
   });
 }
+(function checkForTrailingSlashes() {
+  if (!window.location.pathname.endsWith('/')) {
+    if (window.location.pathname.split('.')[1] === 'html') {
+      return;
+    } else if (window.location.pathname.split('?').length > 1) {
+      return;
+    } else if (window.location.pathname.split('#').length > 1) {
+      return;
+    } else {
+      window.location.href = `${window.location.href}/`;
+    }
+  }
+})();

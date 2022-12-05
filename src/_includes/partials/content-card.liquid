@@ -9,13 +9,13 @@
         x-text="() => new Date(date).toLocaleDateString()"></span>
     </div>
     <div class="p-4 border-t-4 border-black">{{ post.data.meta.desc }}</div>
-    {% if details == true %}
-    <div class="flex items-center p-4 border-t-4 border-black">
+    {%- if show_tags == true -%}
+    <ul class="flex items-center p-4 border-t-4 border-black">
       <span class="font-black mr-2">Topics: </span>
       {%- for tag in post.data.topics -%}
-        <span class="mr-2">{{ tag }}</span>
+      <li class="mr-2">{{ tag }}</li>
       {%- endfor -%}
-    </div>
-    {% endif %}
+    </ul>
+  {%- endif -%}
   </li>
 </a>
