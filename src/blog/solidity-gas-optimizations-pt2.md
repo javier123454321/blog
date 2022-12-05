@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blogpost-code.html'
+layout: 'layouts/blogpost.html'
 title: 'Solidity Gas Optimizations pt.2 - Constants'
 tags: ['tutorial']
 topics: ['cryptocurrency', 'software']
 date: '2021-09-29'
 meta:
   desc: "How to save gas by writing efficiently managed solidity code"
+  has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.2 - Constants'
   description: 'How to use constants to get a more efficient smart contract.'

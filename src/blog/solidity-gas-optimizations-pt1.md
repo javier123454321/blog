@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blogpost-code.html'
+layout: 'layouts/blogpost.html'
 title: 'Solidity Gas Optimizations pt.1 - Memory vs Storage'
 tags: ['tutorial']
 topics: ['cryptocurrency', 'software']
 date: '2021-09-21'
 meta:
   desc: "How to save gas by writing efficiently managed solidity code"
+  has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.1 - Memory vs Storage'
   description: 'How to differentiate between memory and storage in order to save money on gas while writing solidity.'

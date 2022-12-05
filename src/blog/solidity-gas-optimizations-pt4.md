@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blogpost-code.html'
+layout: 'layouts/blogpost.html'
 title: 'Solidity Gas Optimizations pt.4 - Efficient Strings'
 tags: ['tutorial']
 topics: ['cryptocurrency', 'software']
 date: '2022-04-17'
 meta:
   desc: "How to save gas by writing efficiently managed solidity code"
+  has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.4 - Efficient Strings'
   description: 'Understand how the EVM encodes strings to get more efficient code.'

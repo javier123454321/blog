@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blogpost-code.html'
+layout: 'layouts/blogpost.html'
 title: 'Solidity Gas Optimizations pt.3 - Packing Structs'
 tags: ['tutorial']
 topics: ['cryptocurrency', 'software']
 date: '2021-10-03'
 meta:
   desc: "How to save gas by writing efficiently managed solidity code"
+  has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.3 - Packing Structs'
   description: 'Understand how the EVM stores information in order to store it more efficiently.'
