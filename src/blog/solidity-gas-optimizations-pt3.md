@@ -14,13 +14,13 @@ intro:
 So now that we've looked at some of the basics of assembly reads and writes memory, we can begin to look at how that memory is actually stored on each node. Everytime we make a variable in our solidity code, the evm stores it in a storage slot of 32 bytes (256 bits). That means that every time we have a uint (which is read as a uint256) we have packed a storage slot fully.
 
 So lets look at some code:
-```
+```solidity
     uint128 a;
     uint256 b;
     uint128 c;
 ```
 What the evm does is try to fit everything into storage slots sequentially, but since variable b takes up an entire slot, it cannot fit in in the first one and needs to allocate a total of 3 32byte slots. If you instead order them so that the two smaller slots are next to each other, you can save one such storage operation. A more efficient code would look like this:
-```
+```solidity
     uint128 a;
     uint128 c;
     uint256 b;
