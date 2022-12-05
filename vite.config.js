@@ -15,7 +15,6 @@ function generateInputOption() {
     .filter(function isNotAFileType(dir) {
       return dir.search('.html') === -1;
     });
-  console.log({ paths });
   paths.forEach((element) => {
     element = element.split('.')[0];
     input['blog/' + element] = resolve(

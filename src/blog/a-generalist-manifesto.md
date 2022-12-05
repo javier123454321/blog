@@ -3,11 +3,11 @@ layout: 'layouts/blogpost.html'
 title: 'A Generalist Manifesto'
 tags: ['main']
 topics: ['complexity']
+description: 'No need to think small'
 meta:
   desc: "Fight Society&#39;s Urge to Specialize"
 intro:
   title: 'A Generalist Manifesto'
-  description: 'No need to think small'
 ---
 Traditional wisdom always advices us to narrow down. To specialize, to stay in your lane, to dare not cross over to that which is outside your narrow domain. We do this to each other because it is useful, it is easier to think about a small subset of problems rather than doing the work of finding connections in new areas. We do this because it is easier<a name="ref1">[(1)](#note1)</a>, because it is profitable to be an expert, because people don't want to hire someone that is spread too thin, or because in order to produce something that has not been thought of before, it is best to narrow down as specific as possible. <a name="ref2">[(2)](#note2)</a>
 

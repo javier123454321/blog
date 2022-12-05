@@ -6,24 +6,12 @@ meta:
   desc:
     'Just the thoughts of a person, seldom updated'
 ---
-
-  <div class="w-screen bg-gray-800 py-12">
-    <h1 class="text-3xl font-bold leading-tight text-white text-right {{width}}">
-      Musings by Javier Gonzalez
-    </h1>
-  </div>
+  {% render "partials/heading.html", title: "Musings By <br> Javier Gonzalez", width: "{{width}}" %}
   <div class="py-8 leading-8 {{ width }}">
     <h2 class="text-xl font-black">Featured Posts:</h2>
-    <ul>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-around">
     {%- for post in collections.main -%}
-    <a href="{{ post.filePathStem }}/">
-      <li class="px-4 py-4 my-4 bg-slate-100 hover:bg-sky-200 transition-colors rounded-lg">
-        <div class="flex justify-between ">
-          {{ post.data.title }}
-          <span x-data="{ date: '{{ post.date }}' }" x-text="() => new Date(date).toLocaleDateString()"></span>
-        </div>
-      </li>
-    </a>
+      {% render "partials/content-card.html", post: post %}
     {%- endfor -%}
     </ul>
   </div>

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Work-Sans-SemiBold';
+    src:url('Work-Sans-SemiBold.ttf.woff') format('woff'),
+        url('Work-Sans-SemiBold.ttf.svg#Work-Sans-SemiBold') format('svg'),
+        url('Work-Sans-SemiBold.ttf.eot'),
+        url('Work-Sans-SemiBold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 .blogPost > * > * > a{
     @apply border-b-2 border-black bg-slate-50;
 }
