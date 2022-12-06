@@ -6,6 +6,7 @@ const fs = require('fs');
 function generateInputOption() {
   let input = {
     404: resolve(__dirname, '_site', '404.html'),
+    links: resolve(__dirname, '_site', 'links', 'index.html'),
     main: resolve(__dirname, '_site', 'index.html'),
     blog: resolve(__dirname, '_site', 'blog', 'index.html'),
   };
