@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
-        title: ['Nurom-Bold', 'Inter'],
+        title: ['Inter'],
       },
       dropShadow: {
         hard: '10px 10px 0px #000',

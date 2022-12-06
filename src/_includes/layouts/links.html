@@ -1,6 +1,6 @@
 {% layout "layouts/base.html" %} {% block content %}
 <div id="bg" class="">
-    <main id="main-content" tabindex="-1" class="max-w-sm m-auto">
+    <main id="main-content" tabindex="-1" class="max-w-sm m-auto {{ width }}">
         {{ content }}
         <div class="flex flex-wrap justify-between mt-4">
             {%- for link in data.iconLinks -%}
@@ -12,6 +12,9 @@
                 {% render "partials/link-card.liquid", link: link %}
             {%- endfor -%}
         </div>
+        <!-- <div class="border-4 border-black p-2 bg-white mt-6 drop-shadow-hard">
+            {% include "partials/titok-embed.liquid" %}
+        </div> -->
     </main>
 </div>
 {% endblock %}
