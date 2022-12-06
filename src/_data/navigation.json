@@ -7,6 +7,10 @@
     {
       "text": "All Posts",
       "url": "/blog/"
+    },
+    {
+      "text": "Links",
+      "url": "/links/"
     }
   ]
 }

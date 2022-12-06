@@ -1,0 +1,17 @@
+{% layout "layouts/base.html" %} {% block content %}
+<div id="bg" class="">
+    <main id="main-content" tabindex="-1" class="max-w-sm m-auto">
+        {{ content }}
+        <div class="flex flex-wrap justify-between mt-4">
+            {%- for link in data.iconLinks -%}
+                {% render "partials/link-card.liquid", link: link, icon_only: true %}
+            {%- endfor -%}
+        </div>
+        <div class="grid grid-cols-1 gap-6 mt-8">
+            {%- for link in data.textLinks -%}
+                {% render "partials/link-card.liquid", link: link %}
+            {%- endfor -%}
+        </div>
+    </main>
+</div>
+{% endblock %}

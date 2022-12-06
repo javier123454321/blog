@@ -27,3 +27,6 @@
 .blogPost > p > code {
     @apply p-1 bg-slate-100;
 }
+#main-content > h2 {
+@apply font-bold text-4xl;
+}
