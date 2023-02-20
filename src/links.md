@@ -13,7 +13,9 @@ data:
     { address: "https://github.com/javier123454321", desc: "GitHub", icon: "github.svg"},
   ]
   textLinks: [
-    { address: "https://brave.com/jav593", text: "Support me by getting Brave Browser" }
+    { 
+      address: "https://astral.ninja/2eab634b27a78107c98599a982849b4f71c605316c8f4994861f83dc565df5c8", 
+      text: "Join me on Nostr" },
   ]
 ---
 ## I <em> exist </em> in the internet in these places:

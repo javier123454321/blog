@@ -5,6 +5,7 @@ const fs = require('fs');
 
 function generateInputOption() {
   let input = {
+    'well-known': resolve(__dirname, '_site', 'well-known', 'nostr.json'),
     404: resolve(__dirname, '_site', '404.html'),
     links: resolve(__dirname, '_site', 'links', 'index.html'),
     main: resolve(__dirname, '_site', 'index.html'),
@@ -25,15 +26,18 @@ function generateInputOption() {
       'index.html',
     );
   });
+  console.log(input)
   return input;
 }
-export default defineConfig({
-  root: '_site',
-  build: {
-    outDir: './dist',
-    rollupOptions: {
-      input: generateInputOption(),
+export default defineConfig(({ command, mode, ssrBuild }) => {
+  return {
+    root: '_site',
+    build: {
+      outDir: '../dist',
+      rollupOptions: {
+        input: generateInputOption(),
+      },
+      emptyOutDir: true,
     },
-    emptyOutDir: true,
-  },
+  }
 });

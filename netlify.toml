@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "_site/dist"
+  publish = "_dist"
 
 [context.production]
   environment = { NODE_VERSION = "16.13.2", RUBY_VERSION = "2.7.1" }
@@ -12,9 +12,14 @@
   command = "npm run dev"
   publish = "build"
   port = 5173
-  targetPort = 8080
+  targetPort = 8082
   framework = "#custom"
 
+[[headers]]
+  for = "/.well-known/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    
 [[headers]]
   for = "/*"
   [headers.values]
@@ -22,3 +27,4 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
+

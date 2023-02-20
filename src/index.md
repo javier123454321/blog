@@ -10,8 +10,10 @@ meta:
   <div class="py-8 leading-8 {{ width }}">
     <h2 class="text-xl font-black py-4">Featured Posts:</h2>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-around">
-    {%- for post in collections.main -%}
-      {% render "partials/content-card.liquid", post: post %}
+    {%- for post in collections.main reversed -%}
+      {%- unless post.data.draft -%}
+        {% render "partials/content-card.liquid", post: post %}
+      {%- endunless -%}
     {%- endfor -%}
     </ul>
     <div class="text-center">

@@ -7,7 +7,6 @@ date: '2022-04-13'
 meta:
   desc: "Decision making should not be thought of as financial policy"
 intro:
-  title: 'Back to Token Voting Governance'
   description: 'Decision making should not be thought of as financial policy'
 ---
 __This is the first in the series of essays in which we discuss our thinking behind governance tokens from people in the frontlines of building them out. ValorizeDAO is a community of people building out governance token standards and a platform for people to launch them with no code. Find out more at [Valorize](https://www.valorize.app)__
