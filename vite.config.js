@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 const { resolve } = require('path');
 const fs = require('fs');
 
 function generateInputOption() {
   let input = {
-    'well-known': resolve(__dirname, '_site', 'well-known', 'nostr.json'),
     404: resolve(__dirname, '_site', '404.html'),
     links: resolve(__dirname, '_site', 'links', 'index.html'),
     main: resolve(__dirname, '_site', 'index.html'),
@@ -33,11 +33,21 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
   return {
     root: '_site',
     build: {
-      outDir: '../dist',
+      outDir: '../_dist',
       rollupOptions: {
         input: generateInputOption(),
       },
       emptyOutDir: true,
     },
+    plugins: [
+      viteStaticCopy({
+        targets: [
+          {
+            src: 'well-known/nostr.json',
+            dest: '.well-known'
+          }
+        ]
+      })
+    ]
   }
 });
