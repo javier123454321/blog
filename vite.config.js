@@ -33,7 +33,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
   return {
     root: '_site',
     build: {
-      outDir: '../_dist',
+      outDir: '../dist',
       rollupOptions: {
         input: generateInputOption(),
       },

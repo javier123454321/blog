@@ -8,7 +8,7 @@ meta:
   desc: "How is education tied to experience? The difference between theory and practice"
 intro:
   title: 'Experience and Education'
-  description: 'Doing is what you do in order to learn, learning is not what you do in order to do.'
+  text: 'Doing is what you do in order to learn, learning is not what you do in order to do.'
 ---
 
 Around the year 1,000 a.d. there was a legendary person named Naropa in India. He was an incredible intellectual, and was an absolute genius at debating. He spent much of his youth memorizing the words to traditional buddhist texts, and was the keeper of the Northern Gate of the greatest university at the time, Nalanda. Legend says that he one day a dakini appeared and asked him if he understood the words of the dharma (buddhas teachings). He answered that he did, and that he understood the meaning as well. This made the dakini cry, and she called him a scholar but also a liar, as he did not understand what he was reading, and told him to look for Tilopa, who was the only one who understood. We’ll come back to this story later.

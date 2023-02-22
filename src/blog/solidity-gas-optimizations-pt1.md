@@ -9,7 +9,7 @@ meta:
   has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.1 - Memory vs Storage'
-  description: 'How to differentiate between memory and storage in order to save money on gas while writing solidity.'
+  text: 'How to differentiate between memory and storage in order to save money on gas while writing solidity.'
 ---
 ## Building on a blockchain
 If you are familiar with a language like JavaScript, you tend to never think about how your variable is stored, except to deal with the scope of the variable. When you are making programs to run on a distributed system like a blockchain, you have to think about things a bit differently.

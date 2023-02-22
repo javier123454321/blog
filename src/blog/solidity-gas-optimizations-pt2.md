@@ -9,7 +9,7 @@ meta:
   has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.2 - Constants'
-  description: 'How to use constants to get a more efficient smart contract.'
+  text: 'How to use constants to get a more efficient smart contract.'
 ---
 ## Variables in the blockchain
 Storing variables in memory, on a normal computer, is easy and cheap. However, blockchains are distributed systems, in which every node - or computer - has to store the data locally. That makes storing data expensive, this behavior is discouraged except where necessary.

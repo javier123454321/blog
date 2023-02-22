@@ -9,7 +9,7 @@ meta:
   desc: "What are the implications of living in a society in which any individual can 3D print a working firearm?"
 intro:
   title: 'Reality Just Ain&#39;t What It Used to Be'
-  description: 'What are the implications of living in a society in which any individual can 3D print a working firearm?'
+  text: 'What are the implications of living in a society in which any individual can 3D print a working firearm?'
 ---
 A few days ago an event happened. In July 10, 2018 The Department of Justice in the United States of America offered a settlement to a suit filed by Defence Distributed, a company founded by a [[Cody Wilson]], over what they claimed to be an infringement on their first and second amendment rights (That is the right for Free Speech, and to Bear Arms for the non US public) when they forced them to take down a file sharing website that included free downloadable plans to manufacture with 3d printers or CNC routers a workable firearm. This non-event for many seems to have evaded the public imagination of many individuals. However, there seems to be something unusual when one hears that the government of the US is now going to allow the distribution of the information on how to assemble a deadly weapon with a technology of unprecedented accessibility, yet it is hard to pinpoint exactly why. But oh well, history might prove to exert itself not with a bang, but with a whisper.
 

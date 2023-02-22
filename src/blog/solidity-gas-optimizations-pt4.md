@@ -9,7 +9,7 @@ meta:
   has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.4 - Efficient Strings'
-  description: 'Understand how the EVM encodes strings to get more efficient code.'
+  text: 'Understand how the EVM encodes strings to get more efficient code.'
 ---
 In the previous lesson, we saw a bit about how the solidty compiler and the EVM stores data in 32 byte 'buckets' or 'slots'. This applies to every operation that deals with storage. This can come in handy when dealing with strings, specially when using `revert()` or `require()`.
 

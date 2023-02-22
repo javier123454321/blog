@@ -9,7 +9,7 @@ meta:
   has_code: true
 intro:
   title: 'Solidity Gas Optimizations pt.3 - Packing Structs'
-  description: 'Understand how the EVM stores information in order to store it more efficiently.'
+  text: 'Understand how the EVM stores information in order to store it more efficiently.'
 ---
 So now that we've looked at some of the basics of assembly reads and writes memory, we can begin to look at how that memory is actually stored on each node. Everytime we make a variable in our solidity code, the evm stores it in a storage slot of 32 bytes (256 bits). That means that every time we have a uint (which is read as a uint256) we have packed a storage slot fully.
 
