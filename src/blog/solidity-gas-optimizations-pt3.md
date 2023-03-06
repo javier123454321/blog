@@ -19,7 +19,7 @@ So lets look at some code:
     uint256 b;
     uint128 c;
 ```
-What the evm does is try to fit everything into storage slots sequentially, but since variable b takes up an entire slot, it cannot fit in in the first one and needs to allocate a total of 3 32byte slots. If you instead order them so that the two smaller slots are next to each other, you can save one such storage operation. A more efficient code would look like this:
+What the EVM does is try to fit everything into storage slots sequentially, but since variable b takes up an entire slot, it cannot fit in in the first one and needs to allocate a total of 3 32byte slots. If you instead order them so that the two smaller slots are next to each other, you can save one such storage operation. A more efficient code would look like this:
 ```solidity
     uint128 a;
     uint128 c;

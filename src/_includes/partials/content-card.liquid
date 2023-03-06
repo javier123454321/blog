@@ -1,21 +1,32 @@
-<a href="{{ post.filePathStem }}/"
-  class="border-4 bg-white border-black drop-shadow-hard hover:drop-shadow-hard-sm hover:translate-y-1 hover:translate-x-1 transition-all">
-  <li class="">
-    <div class="flex justify-between min-h-[72px]">
-      <article class="max-w-screen text-xl px-4 font-black flex items-center flex-grow ">
-        {{ post.data.title }}
-      </article>
-      <span class="flex items-center px-4 max-w-xs border-l-4 border-black" x-data="{ date: '{{ post.date }}' }"
-        x-text="() => new Date(date).toLocaleDateString()"></span>
-    </div>
-    <div class="p-4 border-t-4 border-black">{{ post.data.meta.desc }}</div>
-    {%- if show_tags == true -%}
-    <ul class="flex items-center p-4 border-t-4 border-black">
-      <span class="font-black mr-2">Topics: </span>
-      {%- for tag in post.data.topics -%}
-      <li class="mr-2">{{ tag }}</li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-  </li>
-</a>
+<div
+  x-data="{ display: false,
+    date: '{{ post.date }}' }"
+  x-init="setTimeout(() => display = true, 0)"
+  x-cloak
+  x-show="display"
+  x-transition.delay.{{ index | times: 100 }}ms
+  class="border-4 bg-white border-black drop-shadow-hard hover:drop-shadow-hard-sm hover:translate-y-1 hover:translate-x-1 transition-all"
+  >
+  <a href="{{ post.filePathStem }}/">
+    <li class="">
+      <div class="flex justify-between min-h-[72px]">
+        <article class="max-w-screen text-xl px-4 font-black flex items-center flex-grow ">
+          {{ post.data.title }}
+        </article>
+        <span
+          class="flex items-center px-4 max-w-xs border-l-4 border-black"
+          x-text="() => new Date(date).toLocaleDateString()"></span>
+      </div>
+      <div class="p-4 border-t-4 border-black">{{ post.data.meta.desc }}</div>
+      {%- if show_tags == true -%}
+        <ul class="flex items-center p-4 border-t-4 border-black">
+          <span class="font-black mr-2">Topics:
+          </span>
+          {%- for tag in post.data.topics -%}
+            <li class="mr-2">{{ tag }}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </li>
+  </a>
+</div>
