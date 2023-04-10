@@ -45,7 +45,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
           {
             src: 'well-known/nostr.json',
             dest: '.well-known'
-          }
+          },
         ]
       })
     ]
