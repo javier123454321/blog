@@ -14,7 +14,7 @@ data:
   ]
   textLinks: [
     { 
-      address: "https://astral.ninja/2eab634b27a78107c98599a982849b4f71c605316c8f4994861f83dc565df5c8", 
+      address: "https://coracle.social/people/npub1964kxje857qs0jv9nx5c9pymfacuvpf3dj85n9yxr7pac4ja7hyq65hftf/notes", 
       text: "Join me on Nostr" },
   ]
 ---

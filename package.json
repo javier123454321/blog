@@ -1,16 +1,12 @@
 {
-  "name": "11st-starter-kit",
-  "description": "11ty, powered by Vite with Tailwind CSS and Alpine.js.",
+  "name": "javiergonzalezdotio",
+  "description": "A blog by Javier Gonzalez",
   "version": "2.0.0",
   "engines": {
     "node": "16.x.x",
     "npm": "8.x.x"
   },
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:stefanfrede/11st-starter-kit.git"
-  },
   "keywords": [
     "alpinejs",
     "eleventy",
@@ -21,16 +17,8 @@
     "tailwindcss",
     "vite"
   ],
-  "author": {
-    "name": "Stefan Frede",
-    "email": "stefan@frede.dev"
-  },
   "license": "MIT",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/stefanfrede/11st-starter-kit/issues"
-  },
-  "homepage": "https://11st-starter-kit.netlify.app",
+  "homepage": "https://javiergonzalez.io",
   "lint-staged": {
     "*.html": "prettier --write",
     "*.css": "stylelint --cache --fix",

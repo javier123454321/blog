@@ -28,8 +28,12 @@
     @apply p-1 bg-slate-100;
 }
 blogpost > p {
-    @apply my-2
+    @apply my-2 border-4 border-red-500;
+}
+
+blogpost > ol {
+    @apply border-4 border-red-500;
 }
 #main-content > h2 {
-@apply font-bold text-4xl;
+    @apply font-bold text-4xl;
 }
