@@ -7,6 +7,9 @@
     <div class="py-8 leading-8 text-gray-600 -mx-4 px-8 border-b-4 border-black">
       <p class="text-xl">{{ intro.text }}</p>
     </div>
+      {% if draft %}
+      <h2 class="mt-4 text-red-700 font-black text-center">(This Post is a Draft)</h2>
+      {% endif %}
     <div class="prose-lg prose-gray text-gray-800 blogPost px-4" >{{ content }}</div>
     <div class="mt-4 px-4 pt-4 border-t-2 border-black">
       Leave a Comment via Nostr:
