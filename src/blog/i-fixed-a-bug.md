@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/blogpost.html'
-title: 'I Fixed The Bug The Other Day'
+title: 'I Fixed A Bug The Other Day'
+
 tags: ['main']
 topics: ['software']
 date: '2023-08-10'
@@ -19,7 +20,8 @@ I work in supermarket systems. Think e-commerce on steroids. We do weekly ads (w
 It wasn't. It was, however an issue that was difficult to replicate in our lower test environments, as the data simply wasn't there. It was also an issue that had to do how the external provider formatted the data that they were passing to us. Because this data was missing a field, it required manual data entry to update it. However, this data changed in real time, so it was OFTEN out of date. Whenever this issue came up to developers, the reaction was always to blame the vendor. This is natural, as it technically was the vendor's fault. However, what became apparent is that people were not going below the surface level to get to the heart of what could be done.
 
 It became clear that this was an issue in **process** not in **execution**. The inertia in the company was to find why it would be hard to do, or impossible to do, why the fault lay elsewhere. We had spikes, and backlogs with this issue, but no action. I had never looked at this code, but was told to take a look, given that we seemed to have the data coming back in one of our API calls. Here's a diagram of the flow of info that we already had on our site:
-<img class="mx-auto" src="https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FJavier-knowledge-graph%2Fh6ENQGUuBW.png?alt=media&token=57c98ed0-1b2e-4ed5-9d51-9f5e0d3b7ed7)">
+<img class="mx-auto max-w-full object-scale-down" src="/images/i-fixed-a-bug-graphic.png">
+
 
 That's right, for any developer, the answer here is simple: use the coupons that we are ALREADY receiving on the frontend to populate the fields that users expect so they can get their discounts. Products already had the associated coupons, but we were simply ignoring that. Not only where we ignoring that, we said it was not possible to do. This reminds me of [this article](https://badsoftwareadvice.substack.com/p/how-to-debug-software) I read on how to report a bug:
 
@@ -50,4 +52,5 @@ This pressure and quite frankly this contradiction is an extremely difficult one
 
 I've also been thinking quite a bit of a company as a cybernetic system. You have a product, and that product has a shape which is shaped by the organizational structure (in Software Development, we call it [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law)). The product reflects the org, and the org reflects the product. This separation gets reinforced, and we were reinforcing invisible (and nonexistent to the customer) boundaries within ourselves and the vendors for no good reason. I want to investigate this notion of cybernetic systems and how to direct them in the context of a software company, so I'll be writing more about that.
 
-In the end, this issue revealed a flaw in process more than a flaw in the technical execution of our product. Of course a [[leaky abstraction]] showed to the customer, but it was a matter of understanding it and patching it rather than allowing that distinction to continue and reinforce itself. As I progress in software, I am very interested in thinking of steering the cybernetic system of a corporation in order to get self reinforcing outcomes in an intentional direction. I will be writing on that more soon.
+In the end, this issue revealed a flaw in process more than a flaw in the technical execution of our product. Of course a [leaky abstraction](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/) showed to the customer, but it was a matter of understanding it and patching it rather than allowing that distinction to continue and reinforce itself. As I progress in software, I am very interested in thinking of steering the cybernetic system of a corporation in order to get self reinforcing outcomes in an intentional direction. I will be writing on that more soon.
+
