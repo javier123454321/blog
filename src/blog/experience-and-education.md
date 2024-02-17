@@ -2,7 +2,7 @@
 layout: 'layouts/blogpost.html'
 title: 'Experience and Education'
 date: '2020-11-16'
-tags: ['musing']
+tags: ['main', 'musing']
 topics: ['pedagogy']
 meta:
   desc: "How is education tied to experience? The difference between theory and practice"

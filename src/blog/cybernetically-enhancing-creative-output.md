@@ -1,7 +1,6 @@
 ---
 layout: 'layouts/blogpost.html'
 title: 'On Cybernetically Enhancing Creative Output'
-tags: ['main']
 topics: ['complexity', 'technology']
 date: '2023-02-20'
 meta:
