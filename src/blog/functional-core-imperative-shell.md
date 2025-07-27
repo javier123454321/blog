@@ -3,7 +3,6 @@ layout: 'layouts/blogpost.html'
 title: 'The Functional Core Imperative Shell Paradigm'
 tags: ['main']
 topics: ['software', 'design patterns']
-
 date: '2024-02-16'
 meta:
   desc: 'How we are designing a new application using The Functional Core Imperative Shell Paradigm'

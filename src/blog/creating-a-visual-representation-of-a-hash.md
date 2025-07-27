@@ -1,10 +1,9 @@
 ---
 layout: 'layouts/blogpost.html'
 title: 'Creating a Visual Representation of a Hash'
-tags: ['main']
+tags: []
 topics: ['frontend', 'technology', 'cryptography']
 date: '2023-04-09'
-draft: true
 meta:
   desc: "Using SVGs to provide a visual fingerprint of data"
   has_code: true

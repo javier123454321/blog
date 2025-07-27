@@ -14,7 +14,7 @@ data:
   ]
   textLinks: [
     { 
-      address: "https://coracle.social/people/npub1964kxje857qs0jv9nx5c9pymfacuvpf3dj85n9yxr7pac4ja7hyq65hftf/notes", 
+      address: "https://coracle.social/npub1964kxje857qs0jv9nx5c9pymfacuvpf3dj85n9yxr7pac4ja7hyq65hftf", 
       text: "Join me on Nostr" },
   ]
 ---
