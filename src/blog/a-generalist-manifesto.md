@@ -3,6 +3,7 @@ layout: 'layouts/blogpost.html'
 title: 'A Generalist Manifesto'
 tags: ['main']
 topics: ['complexity']
+date: '2023-04-13'
 meta:
   desc: "Fight Society&#39;s Urge to Specialize"
 intro:
