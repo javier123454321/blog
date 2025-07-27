@@ -2,10 +2,6 @@
   "name": "javiergonzalezdotio",
   "description": "A blog by Javier Gonzalez",
   "version": "2.0.0",
-  "engines": {
-    "node": "16.x.x",
-    "npm": "8.x.x"
-  },
   "main": "index.js",
   "keywords": [
     "alpinejs",
@@ -33,6 +29,7 @@
     "dev:eleventy": "npx @11ty/eleventy --incremental --watch",
     "dev:vite": "npx vite",
     "prebuild": "run-s clean",
+    "deploy:preview": "npm run build && npx netlify deploy --dir dist --no-build",
     "build": "cross-env NODE_ENV=production run-s build:*",
     "build:eleventy": "npx @11ty/eleventy",
     "build:vite": "npx vite build",
