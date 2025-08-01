@@ -10,6 +10,7 @@ meta:
 intro:
   text: 'I fixed a bug that was in production for 2 years the other day. My boss said thank you, the UX researcher that called it out two years ago and was told it was not possible to do on our end said thank you. The product manager that had tried to tackle the issue a few times but gotten nowhere with their devs said thank you. It turns out that it was one of the biggest customer complaints and for some reason it had been neglected? ignored? idk. The change was about 20 lines of code, as they usually are, but had an outsized impact on customer satisfaction ratings. Why?'
 ---
+<strong>Edit:</strong> This post got some traction in [hacker news](https://news.ycombinator.com/item?id=37084262) and it inspired some great discussion.
 
 ### The Issue
 
