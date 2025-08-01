@@ -20,8 +20,8 @@ meta:
       <a href="/blog/" class="">
       <button class="mt-4 px-4 py-2
         border-4
-      bg-white 
-      border-black
+        bg-white 
+        border-black
         drop-shadow-hard
         hover:drop-shadow-hard-sm
         hover:translate-y-1

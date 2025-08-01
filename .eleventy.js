@@ -11,8 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/public');
   eleventyConfig.addPassthroughCopy('./src/styles');
   eleventyConfig.addPassthroughCopy('./src/well-known');
-  eleventyConfig.addPassthroughCopy('./src/main.js');
-  eleventyConfig.addPassthroughCopy('./src/prism.js');
+  eleventyConfig.addPassthroughCopy('./src/js');
   eleventyConfig.addCollection("filteredBySociety", function (collectionApi) {
     const collection = collectionApi.getAll().filter(function filterNonSociety(item) {
       return item.data.topics.includes('society')

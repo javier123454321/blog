@@ -1,10 +1,4 @@
-import './styles/main.css';
-
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
+import '../styles/main.css';
 
 const env = document.querySelector('body').dataset.env;
 

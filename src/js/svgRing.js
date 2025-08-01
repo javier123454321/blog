@@ -1,0 +1,51 @@
+console.log('=====\n\n\nloaded svg-ring\n\n\n=====')
+document.addEventListener('alpine:init', () => {
+  Alpine.data('svgRingDemo', () => ({ 
+    preimage: '',
+    init() {
+        this.preimage = this.$el.dataset.preimage
+    }
+    hash: async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);                    
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));             
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      return hashHex;
+    },
+    translatePubKeyHexColors(pubkey) {
+        if (!(/\b[0-9A-Fa-f]{64}\b/).test(pubkey)) {
+            return;
+        }
+        const hexvalues = pubkey.split('').reduce((accumulator, currentValue, currentIndex) => {
+            if (currentIndex % 6 === 0) {
+                accumulator[currentIndex / 6] = '';
+            }
+            accumulator[Math.floor(currentIndex / 6)] += currentValue;
+            return accumulator;
+        }, []);
+        return hexvalues;
+    },
+    translatePubKeyToSvgRing(pubkey) {
+      const hexValues = this.translatePubKeyHexColors(pubkey);
+      if (!hexValues)
+          return;
+      const profileFingerprint = document.createElement('svg');
+      profileFingerprint.setAttribute('width', '100%');
+      profileFingerprint.setAttribute('height', '100%');
+      profileFingerprint.setAttribute('viewBox', '0 0 42 42');
+      hexValues.forEach((hex, i) => {
+          const circle = document.createElement('circle');
+          circle.setAttribute('stroke', '#' + hex);
+          circle.setAttribute('stroke-width', '4');
+          circle.setAttribute('r', '15.91549430918954');
+          circle.setAttribute('cx', '21');
+          circle.setAttribute('cy', '21');
+          const offset = Math.floor(100 / hexValues.length);
+          circle.setAttribute('stroke-dasharray', `${i + 1 !== hexValues.length ? offset : 10} ${i + 1 !== hexValues.length ? 100 - offset : 89}`);
+          circle.setAttribute('stroke-dashoffset', `${offset * i}`);
+          profileFingerprint.appendChild(circle);
+      });
+      return profileFingerprint;
+    }
+  }));
+});
