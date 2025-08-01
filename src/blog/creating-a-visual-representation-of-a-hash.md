@@ -48,3 +48,56 @@ In Nostr, your identity is represented by a unique hash. This brings up a signif
 {% render "partials/components/hash-input.liquid"  preimage: 'Color coat this hash', svg: true %}
 
 So that is all I have for now. I do believe that client developers should implement something like this in Nostr. I kept it simple and have the code free for anyone to use in my [github](https://github.com/javier123454321/blog/tree/main/src/_includes/partials/components/hash-input.liquid). Give me a shout out if you use it in your client. Also, [connect with me on Nostr](https://coracle.social/people/npub1964kxje857qs0jv9nx5c9pymfacuvpf3dj85n9yxr7pac4ja7hyq65hftf/notes) if you want to get in touch. 
+
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('svgRingDemo', () => ({ 
+      preimage: '',
+      init() {
+          this.preimage = this.$el.dataset.preimage
+      },
+      hash: async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);                    
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));             
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        return hashHex;
+      },
+      translatePubKeyHexColors(pubkey) {
+          if (!(/\b[0-9A-Fa-f]{64}\b/).test(pubkey)) {
+              return;
+          }
+          const hexvalues = pubkey.split('').reduce((accumulator, currentValue, currentIndex) => {
+              if (currentIndex % 6 === 0) {
+                  accumulator[currentIndex / 6] = '';
+              }
+              accumulator[Math.floor(currentIndex / 6)] += currentValue;
+              return accumulator;
+          }, []);
+          return hexvalues;
+      },
+      translatePubKeyToSvgRing(pubkey) {
+        const hexValues = this.translatePubKeyHexColors(pubkey);
+        if (!hexValues)
+            return;
+        const profileFingerprint = document.createElement('svg');
+        profileFingerprint.setAttribute('width', '100%');
+        profileFingerprint.setAttribute('height', '100%');
+        profileFingerprint.setAttribute('viewBox', '0 0 42 42');
+        hexValues.forEach((hex, i) => {
+            const circle = document.createElement('circle');
+            circle.setAttribute('stroke', '#' + hex);
+            circle.setAttribute('stroke-width', '4');
+            circle.setAttribute('r', '15.91549430918954');
+            circle.setAttribute('cx', '21');
+            circle.setAttribute('cy', '21');
+            const offset = Math.floor(100 / hexValues.length);
+            circle.setAttribute('stroke-dasharray', `${i + 1 !== hexValues.length ? offset : 10} ${i + 1 !== hexValues.length ? 100 - offset : 89}`);
+            circle.setAttribute('stroke-dashoffset', `${offset * i}`);
+            profileFingerprint.appendChild(circle);
+        });
+        return profileFingerprint;
+      }
+    }));
+  });
+</script>
