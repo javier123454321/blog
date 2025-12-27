@@ -1,5 +1,14 @@
-La Fundación de Tenochtitlan
-
+---
+layout: 'layouts/blogpost.html'
+title: 'La Fundación de Tenochtitlán'
+tags: ['main']
+topics: ['poesía', 'español']
+date: '2025-09-27'
+meta:
+  desc: "Historia ficcionizada sobre la leyenda del peregrinaje del pueblo Mexica (Azteca) contada por un personaje que la vivio."
+intro:
+  text: 'Este es un cuento dedicado a mis hijos Leon y Zente, quienes son mi mundo y mi inspiración. Este cuento me lo contó por primera vez mi tío Germán, y me dejó fascinado desde niño. Es de esos mitos que aunque no sean veridicos, su ficción es mil veces más real que cientos de discusiones de antropólogos sobre cuales son los simples hechos de estos eventos. Que el mito despierte su inspiración y el deseo de aventura que despertó en mí.'
+---
 Era un día de esos que no se sentía particularmente distinto a los otros. Era otro día de viaje sin rumbo, pero con destino. Para ese entonces, mis abuelos llevaban años repitiendo las historias que les contaron sus abuelos, y a quienes les contaron los abuelos de ellos. 200 años llevamos, sin saber a donde ir para encontrar esa insignia que recibieron nuestros mayores.
 
 La historia que nos contaban iba así. En ese entonces, nuestra gente aún llevaba el nombre de Aztecas. Vivían en Aztlan, aquella isla de las garzas que nunca conocimos ni yo ni mis padres. A nosotros se nos hace normal nunca haber conocido esa tierra del norte lejano paradisiaca. Para ellos, debió de haber sido aterrador cuando les llegó la revelación de Huitzilopochtli a decirles a los sabios de ese entonces:
