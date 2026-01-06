@@ -17,11 +17,11 @@ Recently, I have been on a bit of a mission at work. It started when our greenfi
 
 I'm not sure what I can and cannot explain about the setup, but I will describe it in loose detail.
 
-  1. We had an NGINX reverse proxy that would start up in parallel to a Spring Boot server locally.
-  2. However, we didn't just have an NGINX file; rather, we had a Handlebars file which would build the NGINX file based on user configuration.
-  3. The NGINX proxy, once built, would forward the requests to our microservice aggregator, which would use a header to give an IP address to the entry point of the app.
-  4. This header contained the local IP of the client making the request with Spring Boot's port and was used to tunnel requests back to the local server, which would then render a Thymeleaf template with information about things like configuration, session, and other user information, as well as the tenant in our multi-tenant application.
-  5. The frontend was simultaneously running a full build in watch mode, built to the `/dist` folder nested in the Spring Boot application, and the NGINX server would serve the static assets in there.
+1. We had an NGINX reverse proxy that would start up in parallel to a Spring Boot server locally.
+2. However, we didn't just have an NGINX file; rather, we had a Handlebars file which would build the NGINX file based on user configuration.
+3. The NGINX proxy, once built, would forward the requests to our microservice aggregator, which would use a header to give an IP address to the entry point of the app.
+4. This header contained the local IP of the client making the request with Spring Boot's port and was used to tunnel requests back to the local server, which would then render a Thymeleaf template with information about things like configuration, session, and other user information, as well as the tenant in our multi-tenant application.
+5. The frontend was simultaneously running a full build in watch mode, built to the `/dist` folder nested in the Spring Boot application, and the NGINX server would serve the static assets in there.
 
 To further complicate things, the `/dist` folder also included the Thymeleaf templates that would be used by Spring Boot and were only accessible once you ran that build.
 
@@ -39,12 +39,13 @@ It started with a simple quality-of-life fix, to change the proxied headers so e
 
 Time spent understanding and implementing the fix: <strong>2 days</strong>
 
-Money Saved for the Company: <strong>$16,500/year [^1]</strong>
+Money Saved for the Company: <strong>$16,500/year <a name="ref1">[(1)](#note1)</a></strong>
 
 ### Step 2. Forwarding traffic dynamically to the correct backing service
 
 For example, being able to go to `local.alpha.{tenantname}.com` or `local.beta.{tenantname}.com` without updating configuration. This seemed like a straightforward addition to the step before; however, it did somewhat throw me a curve in that [NGINX does not use the same DNS resolver when you use a variable upstream address](https://stackoverflow.com/a/71224059). But we already had a way to build the NGINX file dynamically with Handlebars, so I leveraged that and resolved the possible backing environments to their respective IPs before running the NGINX server. This took a while to figure out, as the IP addresses of the environments are dynamic and need to be resolved inside the corporate VPN.
-Money Saved for the Company: $58,000/year [^2]
+
+Money Saved for the Company: <strong>$58,000/year</strong> <a name="ref2">[(2)](#note2)</a>
 
 ### Step 3. Becoming the guy that knows how to do things related to this part of the app
 
@@ -64,24 +65,28 @@ It started with understanding the Vite WebSocket connection, how to forward the 
 ```
 
 Which meant I had to go in and manually tweak the Thymeleaf templates, though they were being built by a Handlebars template. (Yeah, those savvy enough to work both in JS and in Java might notice that I just said we used a templating language to build a fragment used by another templating language.) At first, I did not touch the build process at all—just focused on dev and then worried about building things correctly when we crossed that bridge. I naturally had to deal with outdated Sass, which prevented the CSS from working in dev mode, and with resolving all the imports and chunking things accurately.
-Once I got HMR working and could see instantaneous changes, as well as the app loading correctly along with the styles, it was time to unbundle the build system. Now, changing a 500-line-long webpack config is not for the faint of heart, but most things were simply able to just... go. I removed all Handlebars from the repo because that was crazy to do in the first place, consolidated all the scattered templates into a single folder, and bundled the steps needed for Thymeleaf into a single yarn command called prep. I then resolved the rest of the outputs and was ready to test it out on the developers.
-Money Saved for the Company: $282,000/year [^4]
+Once I got HMR working and could see instantaneous changes, as well as the app loading correctly along with the styles, it was time to unbundle the build system. Now, changing a 500-line-long webpack config is not for the faint of heart, but most things were simply able to just... go. I removed all Handlebars from the repo because that was crazy to do in the first place, consolidated all the scattered templates into a single folder, and bundled the steps needed for Thymeleaf into a single yarn command called prep. I then resolved the rest of the outputs and was ready to test it out on the developers.<a name="ref3">[(3)](#note3)</a>
+
+
+Money Saved for the Company: <strong>$282,000/year</strong> <a name="ref4">[(4)](#note4)</a>
 
 ## The other side
 
-So everything got merged in, and now we have something that feels much more modern on the frontend. One thing about a change like this is that it not only increases the speed at which you write and see your code changes, it increases overall job satisfaction. There is a cost to developers not feeling like they are working on relevant technology; we've lost good teammates at my current company because of that. The cost is high when you lose people that care enough to not want to work on outdated systems and are left with people that don't care quite as much, and the above costs don't account for those devs we lost. [^5]
+So everything got merged in, and now we have something that feels much more modern on the frontend. One thing about a change like this is that it not only increases the speed at which you write and see your code changes, it increases overall job satisfaction. There is a cost to developers not feeling like they are working on relevant technology; we've lost good teammates at my current company because of that. The cost is high when you lose people that care enough to not want to work on outdated systems and are left with people that don't care quite as much, and the above costs don't account for those devs we lost. <a name="ref4">[(5)](#note5)</a>
+
 My story related to this is to talk about my growth as an engineer. I worked for years on this codebase without touching this part of the codebase. However, there is a particular type of satisfaction that this job gives you in getting into a system that no one knows, that affects my daily work, understanding it, and going through the ultimate test of understanding, which is being able to simplify it. That's a satisfaction that reminds me of why I love this type of work.
 
-## Footnotes
+## **Notes**
 
-[^1]: I calculated this roughly to be 10 minutes per developer every 3-4 days. Assuming a dev works 235 days/year that comes out to 235/3.5 * 10 which gives you minutes saved per dev per year. Then assume an average of $50/hour and 30 developers working for the codebase.
+<a name="note1">**1.**</a> I calculated this roughly to be 10 minutes per developer every 3-4 days. Assuming a dev works 235 days/year that comes out to 235/3.5 \* 10 which gives you minutes saved per dev per year. Then assume an average of $50/hour and 30 developers working for the codebase. [[Back]](#ref1)
 
-[^2]: This ends up being 10 minutes a day which is what I calculated by polling around the developers on how many times they did this and how long it took them. Using the same formula above.
+<a name="note2">**2.**</a> This ends up being 10 minutes a day which is what I calculated by polling around the developers on how many times they did this and how long it took them. Using the same formula above. [[Back]](#ref2)
 
-[^3]: It is strange to detail this in somewhat of a technical detail, while leaving out key details. It's not clear to me what is relevant, as this is not exactly a super technical document retelling the details. It's a reflection on doing the thing.
+<a name="note3">**3.**</a> It is strange to detail this in somewhat of a technical detail, while leaving out key details. It's not clear to me what is relevant, as this is not exactly a super technical document retelling the details. It's a reflection on doing the thing. [[Back]](#ref3)
 
-This number was calculated a bit differently and it's probably undercalculated for a few reasons that we'll dive into in the conclusion. I calculated this to save the developer 60 seconds every 5 minutes or so, which is how often a developer has to write to file (on the low end) and look at their changes in the browser. Assuming that a dev is writing code 4 hours a day, it turns out to be about 48 minutes a day! (Which is about 1/4 of the total development time is waiting) I consider this to be accurate even if the time is a bit high, because it does not account for the price of context switching. 60 second delays to see your changes updated is an extremely detrimental lag to productivity which went down to close to instant.
 
-48 mins/day * 235 working days * $50/hour average * 30 devs.
+<a name="note4">**4.**</a>  This number was calculated a bit differently and it's probably undercalculated for a few reasons that we'll dive into in the conclusion. I calculated this to save the developer 60 seconds every 5 minutes or so, which is how often a developer has to write to file (on the low end) and look at their changes in the browser. Assuming that a dev is writing code 4 hours a day, it turns out to be about 48 minutes a day! (Which is about 1/4 of the total development time is waiting) I consider this to be accurate even if the time is a bit high, because it does not account for the price of context switching. 60 second delays to see your changes updated is an extremely detrimental lag to productivity which went down to close to instant.
 
-[^5]: I personally knew 4 people that left and one of the issues they talked about were our outdated practices. Obviously, this is only one facet in a multivariate calculation that people do when faced with the possibility of leaving to a new job.
+48 mins/day \* 235 working days \* $50/hour average \* 30 devs. [[Back]](#ref4)
+
+<a name="note4">**5.**</a> I personally knew 4 people that left and one of the issues they talked about were our outdated practices. Obviously, this is only one facet in a multivariate calculation that people do when faced with the possibility of leaving to a new job. [[Back]](#ref5)
