@@ -9,7 +9,7 @@ intro:
   title: 'On Cybernetically Enhancing Creative Output'
   text: "The naive idea around 'Artificially Intelligent' systems is that they will be used to replace humans, and while some roles are in higher risk, there is much more promise if we think of LLMs as cybernetic systems that can amplify human agency."
 ---
-This essay is not written by ChatGPT or other LLMs, but it is also not written by just myself. This essay represents an interaction where large language models are used as part of a cybernetic system where feedback is processed between a human and machine.
+This essay is not written by ChatGPT or other LLMs, but it is also not written by just myself. This essay represents an interaction where large language models are used apart of a cybernetic system where feedback is processed between a human and machine.
 
 Much has been said about large language models (LLMs) wrongly referred to as artificial intelligence and their role on creative output specifically through writing. Few have the naive idea that they will be used to replace humans, and while some human writing roles that are much more mechanical and transactional such as copywriting, low effort content creation, and technical writing are in higher risk, there is much more promise if we think of LLMs as cybernetic systems that would amplify human agency.
 
