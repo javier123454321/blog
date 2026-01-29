@@ -4,7 +4,7 @@ title: On Vibecode'
 tags: ['main']
 topics: ['artificial intelligence']
 date: '2026-01-26'
-draft: true
+draft: false
 meta:
   desc: "I strongly believe we have entered into a new world with rules of engagement that we haven't quite realized with artificial intelligence"
 intro:
