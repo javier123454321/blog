@@ -8,7 +8,7 @@ draft: true
 meta:
   desc: "I strongly believe we have entered into a new world with rules of engagement that we haven't quite realized with artificial intelligence"
 intro:
-  text: 'I vibe coded an entire application with no idea about how the code looks. I know it works because I'm writing this blog post today with it.'
+  text: "I vibe coded an entire application with no idea about how the code looks. I know it works because I'm writing this blog post today with it."
 ---
 I vibe coded an entire application with no idea about how the code looks. I know it works because I'm writing this blog post today with it.
 
