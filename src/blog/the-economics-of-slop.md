@@ -10,7 +10,7 @@ meta:
 intro:
   text: "We are still at a point where people will ask, 'Is this AI generated?'. That is because we are not noticing that the race has been won by the machines. The internet hasn't been human for a while and thinking it is is a shame."
 ---
-# What are the unit economics of AI slop?
+## What are the unit economics of AI slop?
 
 We seem to be entering a new world. Probably entered it a while ago where the cost of producing an image with AI is a fraction of the cost of taking a picture. As in, it seems that the amount of generated content has completely overtaken the possible amount of human-generated content. And this is just true for everything: code, music, graphics, pictures, text, prose, poetry, think pieces, and the list goes on to everything that can be reproduced the other side of the computer screen. The liminal space in which we encounter ourselves today, the space in which you can consume the internet and you know a few people that you've been following since before 2021 when ChatGPT came out, and you can guarantee with some reasonable assumption that they are not AI generated, this moment is narrowing. And more and more, we're entering into a new moment where the AI-generated content is going to be the default state of everything that you consume through a screen.
 
