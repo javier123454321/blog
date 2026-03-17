@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blogpost.html'
-title: On Vibecode'
+title: On Vibecode
 tags: ['main']
 topics: ['artificial intelligence']
 date: '2026-01-26'
