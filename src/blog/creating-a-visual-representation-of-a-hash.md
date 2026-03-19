@@ -2,7 +2,7 @@
 layout: 'layouts/blogpost.html'
 title: 'Creating a Visual Representation of a Hash'
 tags: []
-topics: ['frontend', 'technology', 'cryptography']
+topics: ['frontend', 'technology', 'cryptography', 'nostr']
 date: '2023-04-09'
 draft: true
 meta:
