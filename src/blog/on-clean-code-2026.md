@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blogpost.html'
-title: 'On Doing the Hard Thing (In the Context of Work)'
+title: 'On the State of Clean Code in 2026'
 
 tags: ['main']
 topics: ['software']
