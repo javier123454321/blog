@@ -8,7 +8,7 @@ draft: false
 meta:
   desc: "Given generative models of AI, we have already lost a battle of what is real in the internet."
 intro:
-  text: "We are still at a point where people will ask, 'Is this AI generated?'. That is because we are not noticing that the race has been won by the machines. The internet hasn't been human for a while and thinking it is is a shame."
+  text: "We are still at a point where people will ask, 'Is this AI generated?'. That is because we are not noticing that the race has been won by the machines. The internet hasn't been human for a while and thinking it is is a mistake."
 ---
 ## What are the unit economics of AI slop?
 
