@@ -6,7 +6,7 @@ tags: ['main']
 topics: ['software']
 date: '2026-03-19'
 meta:
-  desc: 'Grappling with the question whether code dead or is learning to code still relevant.'
+  desc: 'Grappling with the question whether code is dead or is learning to code still relevant.'
 intro:
   text: "Coding is dead, code is solved, and all that. Sure, but is domain expertise still relevant? Is the craft dead?"
 ---
