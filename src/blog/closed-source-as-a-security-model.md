@@ -1,5 +1,5 @@
 layout: 'layouts/blogpost.html'
-title: 'Closed Source is a Business Decision, not Security.
+title: 'Closed Source is a Business Decision, not Security.'
 tags: ['main', 'tech', 'ai']
 topics: ['artificial intelligence']
 date: '2026-04-17'
