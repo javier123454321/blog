@@ -1,3 +1,4 @@
+---
 layout: 'layouts/blogpost.html'
 title: 'Closed Source is a Business Decision, not Security.'
 tags: ['main', 'tech', 'ai']
@@ -27,3 +28,4 @@ Being open changes these variables:
 
 Is **Y > X**? If you assume that more eyes means that not only you are funding the discovery then the answer is likely yes. Then there is the issue of time that the vulnerability exists, which makes the probability of finding it higher.
 I'm not an open source maximalist, and there are plenty of reasons to protect your IP, but to frame this business decision as a security move seems disingenuous to me. It does not work like that.
+
