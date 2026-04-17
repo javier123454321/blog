@@ -4,7 +4,6 @@ title: 'Closed Source is a Business Decision, not Security.'
 tags: ['main', 'tech', 'ai']
 topics: ['artificial intelligence']
 date: '2026-04-17'
-draft: true
 meta:
   desc: "Cal.com claims that moving to closed source is a security decision. It is not."
 intro:
