@@ -1,3 +1,4 @@
+---
 layout: 'layouts/blogpost.html'
 title: 'Closed Source is a Business Decision, not Security.'
 tags: ['main', 'tech', 'ai']
