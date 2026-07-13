@@ -65,7 +65,7 @@ I have found that these rules have led me to have much greater success in achiev
 
 * Once all the individual issues are filled out, apply a ready label. -&gt; **Outcome is a list of issues ready for an agent to work through.**
 
-* Once all the issues are ready, give the Orchestrator agent the lssues to delegate (sequentially).**Outcome is a PR stack which has all the code and a sequential step by step history of all the work done.** &nbsp;<a name="ref2"></a>[(2)](#note2)&nbsp; -&gt; 
+* Once all the issues are ready, give the Orchestrator agent the lssues to delegate (sequentially).&nbsp; -&gt; **Outcome is a PR stack which has all the code and a sequential step by step history of all the work done.** <a name="ref2"></a>[(2)](#note2) 
 
 * Review the code, fix issues now. If the code is completely off, you restart the process in this step, before merging the code. Fixing bad code is a way to make this process less efficient. It is better to judge the architectural decisions here and create single tasks that fix the process before merging it or starting over. Then QA the thing here. -&gt; **The outcome of this is a working feature set.**
 
