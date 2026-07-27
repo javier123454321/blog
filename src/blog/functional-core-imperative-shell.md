@@ -8,7 +8,7 @@ meta:
   desc: 'How we are designing a new application using The Functional Core Imperative Shell Paradigm'
 intro:
   title: 'We are building a greenfield project the "right" way'
-  text: 'How we are attempting to tackle the complecity of modern frontend development'
+  text: 'How we are attempting to tackle the complexity of modern frontend development'
 ---
 I am in a small team of developers that are building a new Nuxt application in our company and here are some of the decisions that we are arriving at to make this a successful launch based on the years of learning from making other vue.js applications at scale. A website frontend is actually quite complex, but can be categorized in a few base concepts.
 
@@ -26,7 +26,7 @@ So starting with the assumption that software that is actively updated has high 
 
 ## The Functional Core Imperative Shell paradigm
 
-Functional programming works well for the Business Logic and the Rendering Logic parts of an application. There should be no surprises in business what the app does if, let's say, a user doesn't provide a valid credit card. Likewise, the visual cue that informs a user of the incorrect credit card should be deterministic, consistent, and tested. Functional programming, at its core is to create this style of deterministic, testable (and theoretically bug free) software. A useful side effect is that it is also a more intuitive way to think about organizing the code. The problem with sticking to this paradigm in a frontend application is that the user I/O is the crucial aspect that drives the application's behavior.
+Functional programming works well for the Business Logic and the Rendering Logic parts of an application. There should be no surprises in business what the app does if, let's say, a user doesn't provide a valid credit card. Likewise, the visual cue that informs a user of the incorrect credit card should be deterministic, consistent, and tested. Functional programming, at its core, is to create this style of deterministic, testable (and theoretically bug free) software. A useful side effect is that it is also a more intuitive way to think about organizing the code. The problem with sticking to this paradigm in a frontend application is that the user I/O is the crucial aspect that drives the application's behavior.
 
 Here is a simple image that describes the paradigm:
 
@@ -34,15 +34,15 @@ Here is a simple image that describes the paradigm:
 
 ### Functional Core
 
-The functional core is a way to separate the functionality of the user interface into clean boundaries. The driver of this paradigm is to create predictable frontend components. Functional programming is, in its purest form about reducing or completely removing extraneous variables from affecting the outcome of your code. That means that you can reliably tell, that given a condition the outcome will be constant. If you go around looking for examples, you'll find people speaking about an `add` function. However, in frontend development, simple arithmetic functions are rarely used.
+The functional core is a way to separate the functionality of the user interface into clean boundaries. The driver of this paradigm is to create predictable frontend components. Functional programming is, in its purest form, about reducing or completely removing extraneous variables from affecting the outcome of your code. That means that you can reliably tell that given a condition the outcome will be constant. If you go around looking for examples, you'll find people speaking about an `add` function. However, in frontend development, simple arithmetic functions are rarely used.
 
 **Functional Frontends**
 
-For a frontend to be functional, we need to think in clean boundaries for the components that we are using. In vue, that means relying on props and events to communicate from parent to child, and on clearly delimiting user interactions. Frontends are dynamic things, and you might argue that relying on events is imperative in its core, so to me, the functional aspect is to delineate the boundary explicitly to be as predictable as it can be. There will still be internal state to manage, so you might go a step further and attempt to completely get things out the imperative shell to be minimal, but you can minimize the side effects by reducing everything to clean boundaries.
+For a frontend to be functional, we need to think in clean boundaries for the components that we are using. In Vue, that means relying on props and events to communicate from parent to child, and on clearly delimiting user interactions. Frontends are dynamic things, and you might argue that relying on events is imperative at its core, so the functional aspect is to delineate the boundary explicitly to be as predictable as it can be. There will still be internal state to manage, so you might go a step further and attempt to completely get things out of the imperative shell to be minimal, but you can minimize the side effects by reducing everything to clean boundaries.
 
-The problem is that it is hard to define a clean functional boundary, so that is where testing comes in. When we write the test for components first, we begin to define the components in terms of its interactions, and interfaces. The harder a component is to test, the more we are straying from a functional core, as the cause of difficult to test components is increasing the context they need to function. TDD works best for this approach.
+The problem is that it is hard to define a clean functional boundary, so that is where testing comes in. When we write the test for components first, we begin to define the components in terms of their interactions and interfaces. The harder a component is to test, the more we are straying from a functional core, as the cause of difficult to test components is increasing the context they need to function. TDD works best for this approach.
 
-A side note here is that TDD is used as a way to design components. So not only are the things tested, they are designed and developed through tests. That's why tests first makes sense.
+A side note here is that TDD is used as a way to design components. So not only are the things tested, but they are designed and developed through tests. That's why tests first makes sense.
 
 Where possible, business logic is removed from the components themselves and built in a functional way, also with testing first. This further removes the shell of the component to be about the imperative functions, and the components themselves are `as functional as possible` within the context of the application. This creates the following relationship:
 
@@ -50,11 +50,11 @@ Where possible, business logic is removed from the components themselves and bui
 
 **Business Logic**
 
-Where it makes sense, we try to put business logic into functions that can be imported, and are clearly bound (and tested). The main aspect of this paradigm is to keep this away from the presentation layer, which is handled by the framework. This is straight forward, if you need to do heavy processing of data in the frontend, then do so in an external utility that you bring in. This is where you do the type of stuff that intro to functional programming tutorials do. The basic Add function, the string manipulation, the data validation and sanitization, etc.
+Where it makes sense, we try to put business logic into functions that can be imported, and are clearly bound (and tested). The main aspect of this paradigm is to keep this away from the presentation layer, which is handled by the framework. This is straightforward; if you need to do heavy processing of data in the frontend, then do so in an external utility that you bring in. This is where you do the type of stuff that intro to functional programming tutorials do. The basic Add function, the string manipulation, the data validation and sanitization, etc.
 
 ### The Imperative Shell
 
-At the 'top' context of our component based frontend application, we have the page level components, which are where things related to navigation happen. This is actually nicely complimentary to Server Side Rendered technology like Nuxt, Next, and SvelteKit, which pushes you to use a route based approach to your structure. This is where we worry about integrating with APIs, handle data fetching and modifying, and do the more 'imperative' type of work. This part we don't TDD, but we do use a E2E test suite to ensure its stability.
+At the 'top' context of our component-based frontend application, we have the page-level components, which are where things related to navigation happen. This is actually nicely complimentary to server-side rendered technology like Nuxt, Next, and SvelteKit, which pushes you to use a route-based approach to your structure. This is where we worry about integrating with APIs, handle data fetching and modifying, and do the more 'imperative' type of work. This part we don't TDD, but we do use a E2E test suite to ensure its stability.
 
 ### Drawbacks
 
