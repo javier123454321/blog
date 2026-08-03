@@ -1,0 +1,34 @@
+{% layout "layouts/base.html" %} {% block content %}
+<main id="main-content" tabindex="-1" class="">
+  <div class="px-4 bg-purple-50 drop-shadow-hard border-black border-4 max-w-6xl mx-auto">
+    <h1 class="text-5xl font-black leading-tight text-black border-black border-b-4 -mx-4 px-8 py-2">
+      {{ title }}
+    </h1>
+    {% if date %}
+    <div class="text-sm text-gray-500 py-3 -mx-4 px-8 border-b-4 border-black flex items-center gap-3">
+      <span>{{ date }}</span>
+      {%- if url and url != "" -%}
+        <a href="{{ url }}" target="_blank" rel="noopener"
+          class="ml-auto inline-flex items-center gap-1 font-black text-black hover:underline">
+          View project <span aria-hidden="true">↗</span>
+        </a>
+      {%- endif -%}
+    </div>
+    {% endif %}
+    {% if desc %}
+    <div class="py-6 leading-8 text-gray-600 -mx-4 px-8 border-b-4 border-black">
+      <p class="text-xl">{{ desc }}</p>
+    </div>
+    {% endif %}
+    {% if image and image != "/images/projects/.gitkeep" %}
+    <div class="-mx-4 border-b-4 border-black">
+      <img src="{{ image }}" alt="{{ title }}" class="w-full max-h-96 object-cover" />
+    </div>
+    {% endif %}
+    {% if draft %}
+    <h2 class="mt-4 text-black font-black text-center">(This Project is a Draft)</h2>
+    {% endif %}
+    <div class="prose-lg prose-gray text-gray-800 blogPost px-4 py-8">{{ content }}</div>
+  </div>
+</main>
+{% endblock %}

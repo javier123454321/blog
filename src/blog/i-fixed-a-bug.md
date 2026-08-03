@@ -10,7 +10,8 @@ meta:
 intro:
   text: 'I fixed a bug that was in production for 2 years the other day. My boss said thank you, the UX researcher that called it out two years ago and was told it was not possible to do on our end said thank you. The product manager that had tried to tackle the issue a few times but gotten nowhere with their devs said thank you. It turns out that it was one of the biggest customer complaints and for some reason it had been neglected? ignored? idk. The change was about 20 lines of code, as they usually are, but had an outsized impact on customer satisfaction ratings. Why?'
 ---
-<strong>Edit:</strong> This post got some traction in [hacker news](https://news.ycombinator.com/item?id=37084262) and it inspired some great discussion.
+
+**Edit:** This post got some traction in [hacker news](https://news.ycombinator.com/item?id=37084262) and it inspired some great discussion.
 
 ### The Issue
 
@@ -18,11 +19,14 @@ I work in supermarket systems. Think e-commerce on steroids. We do weekly ads (w
 
 ### Why was it hard to fix
 
+{% render "partials/components/media-card.liquid", image: '/images/New-Project-2.png', alt: 'New Project(2)', side: 'left', text: 'Write your text here.' %}
+
+![](http://localhost:5178/images/62141017_10161635019585417_8273723526117064704_n-3.jpg)
+
 It wasn't. It was, however an issue that was difficult to replicate in our lower test environments, as the data simply wasn't there. It was also an issue that had to do how the external provider formatted the data that they were passing to us. Because this data was missing a field, it required manual data entry to update it. However, this data changed in real time, so it was OFTEN out of date. Whenever this issue came up to developers, the reaction was always to blame the vendor. This is natural, as it technically was the vendor's fault. However, what became apparent is that people were not going below the surface level to get to the heart of what could be done.
 
 It became clear that this was an issue in **process** not in **execution**. The inertia in the company was to find why it would be hard to do, or impossible to do, why the fault lay elsewhere. We had spikes, and backlogs with this issue, but no action. I had never looked at this code, but was told to take a look, given that we seemed to have the data coming back in one of our API calls. Here's a diagram of the flow of info that we already had on our site:
-<img class="mx-auto max-w-full object-scale-down" src="/images/i-fixed-a-bug-graphic.png">
-
+![](/images/i-fixed-a-bug-graphic.png)
 
 That's right, for any developer, the answer here is simple: use the coupons that we are ALREADY receiving on the frontend to populate the fields that users expect so they can get their discounts. Products already had the associated coupons, but we were simply ignoring that. Not only where we ignoring that, we said it was not possible to do. This reminds me of [this article](https://badsoftwareadvice.substack.com/p/how-to-debug-software) I read on how to report a bug:
 

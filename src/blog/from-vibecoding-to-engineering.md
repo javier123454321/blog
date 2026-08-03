@@ -7,7 +7,7 @@ date: '2026-07-11'
 meta:
   desc: "My Journey in creating guardrails to build more 'serious' software without writing the code myself."
 intro:
-  text: "Previously, I wrote about vibecoding when I was just starting out to seriously try the approach. I've been doing something that more 'serious' people are calling agentic engineering, which is clearly an attempt at sounding more legitimate when doing the same thing. I have updated my thinking about this process and want to document my learning here."
+  text: "Previously, I wrote about vibecoding when I was just starting out to seriously try the approach. I've been doing something that more 'serious' people are calling agentic engineering, which is clearly an attempt at sounding more legitimate when doing the same thing. I have updated my thinking about this process and want to document my learning here. aa"
 ---
 
 ## The harness and its boundaries

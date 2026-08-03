@@ -1,0 +1,13 @@
+<figure class="not-prose bg-white border-4 border-black drop-shadow-hard flex flex-col md:flex-row">
+{% if side == 'right' %}
+  <div class="md:w-1/2">
+    <img src="{{ image }}" alt="{{ alt }}" class="w-full h-full object-cover" loading="lazy">
+  </div>
+  <figcaption class="md:w-1/2 flex items-center p-6 md:p-8">{{ text }}</figcaption>
+{% else %}
+  <figcaption class="md:w-1/2 flex items-center p-6 md:p-8">{{ text }}</figcaption>
+  <div class="md:w-1/2">
+    <img src="{{ image }}" alt="{{ alt }}" class="w-full h-full object-cover" loading="lazy">
+  </div>
+{% endif %}
+</figure>
