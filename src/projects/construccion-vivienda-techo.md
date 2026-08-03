@@ -3,6 +3,7 @@ layout: 'layouts/project.html'
 title: 'A Construction Handbook Redesign I did for Techo Guatemala'
 desc: "In 2018, while living back in my hometown, I did a lot of volunteer work for Techo, including completely redesigning this construction manual for building emergency shelters, of which we built several hundred."
 date: '2024-05-12'
+image: '/images/screenshot-2026-08-03_17-12-13.png'
 tags: ['projects']
 topics: ['design']
 draft: false

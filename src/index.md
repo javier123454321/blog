@@ -32,3 +32,30 @@ meta:
       </a>
     </div>
   </div>
+  <section class="bg-purple-100 border-y-4 border-black">
+    <div class="py-8 leading-8 {{ width }}">
+      <h2 class="text-xl font-black py-4">Some Projects I Have Worked On:</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-around">
+      {%- for project in collections.projects reversed -%}
+        {%- unless project.data.draft -%}
+          {% render "partials/project-card.liquid", project: project, index: forloop.index, show_tags: true %}
+        {%- endunless -%}
+      {%- endfor -%}
+      </ul>
+      <div class="text-center">
+        <a href="/projects/" class="">
+        <button class="mt-4 px-4 py-2
+          border-4
+          bg-white
+          border-black
+          drop-shadow-hard
+          hover:drop-shadow-hard-sm
+          hover:translate-y-1
+          hover:translate-x-1
+          transition-all">
+          All Projects
+        </button>
+        </a>
+      </div>
+    </div>
+  </section>
