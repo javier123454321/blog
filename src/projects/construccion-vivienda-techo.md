@@ -1,14 +1,14 @@
 ---
 layout: 'layouts/project.html'
 title: 'A Construction Handbook Redesign I did for Techo Guatemala'
-desc: "In 2018, while living back in my hometown. I did a lot of volunteer work for Techo, including completely redesigning this construction manual for building emergency shelters, of which we built several hundred."
+desc: "In 2018, while living back in my hometown, I did a lot of volunteer work for Techo, including completely redesigning this construction manual for building emergency shelters, of which we built several hundred."
 date: '2024-05-12'
 tags: ['projects']
 topics: ['design']
 draft: false
 ---
 
-I started off as a volunteer and fresh Architecture grad. There had been a recent eruption by the Volcan de Fuego near the city, so I volunteered to help build houses for the community. We could build around one with seven volunteers working for three days. However, it was really hard to follow the instructions so unskilled volunteers could finish a project. My first ask was to help redesign the instruction manual for people with limited experience with construction to know how to build a house. I did not design the emergency shelters and I did not design the process for building the house. What I did was codify the instructions after learning how to build it myself into a guide that could be dispatched and replicated.
+I started off as a volunteer and fresh Architecture grad. There had been a recent eruption by the Volcan de Fuego near the city, so I volunteered to help build houses for the community. We could build around one house with seven volunteers working for three days. However, it was really hard to follow the instructions so that unskilled volunteers could finish a project. My first ask was to help redesign the instruction manual for people with limited experience with construction to know how to build a house. I did not design the emergency shelters and I did not design the process for building the house. What I did was codify the instructions after learning how to build it myself into a guide that could be dispatched and replicated.
 
 {% render "partials/components/media-card.liquid", image: '/images/screenshot-2026-08-03\_16-18-01.png', alt: 'Material Guide', side: 'left', text: 'Here is how it started to look like. The first step was to completely rebuild a 3D model that we could use in order to create the diagrams that we will be needing.' %}
 
@@ -29,7 +29,7 @@ We had to focus our efforts on different parts of the process. We didn't have mu
 
 ## The Final Outcome
 
-Beyond the 180 houses that we know that we constructed for this initiative, this was used to continue providing instructions for building temporary relief shelters for years afterwards. This was one of the most meaningful pieces of design work that I have had the privilege to work on.
+Beyond the 180 houses that we know we constructed for this initiative, this was used to continue providing instructions for building temporary relief shelters for years afterwards. This was one of the most meaningful pieces of design work that I have had the privilege to work on.
 
 
 
