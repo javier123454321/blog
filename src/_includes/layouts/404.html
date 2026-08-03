@@ -1,20 +1,15 @@
-{% layout "layouts/plain.html" %} {% block content %}
-<main class="flex min-h-screen items-center justify-center bg-red-700">
-  <div
-    class="{{ width }}"
-  >
-    <h2 class="animate-pulse text-7xl font-extrabold leading-10 text-white">
-      404
-    </h2>
-    <p class="mt-4 text-lg leading-6 text-red-200">
-      Take me back
-      <a
-        href="/"
-        class="font-bold underline transition duration-150 ease-in-out"
-      >
-        home
+{% layout "layouts/base.html" %} {% block content %}
+<main id="main-content" tabindex="-1" class="flex min-h-screen items-center justify-center {{ width }}">
+  <div class="text-center">
+    <h2 class="text-8xl font-black text-black">404</h2>
+    <p class="mt-4 text-xl font-bold text-gray-700">Page not found</p>
+    <div class="mt-8">
+      <a href="/">
+        <button class="px-6 py-3 border-4 bg-white border-black drop-shadow-hard hover:drop-shadow-hard-sm hover:translate-y-1 hover:translate-x-1 transition-all">
+          Back to Home
+        </button>
       </a>
-    </p>
+    </div>
   </div>
 </main>
 {% endblock %}
