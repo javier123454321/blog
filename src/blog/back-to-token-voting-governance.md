@@ -9,7 +9,8 @@ meta:
 intro:
   text: 'Decision making should not be thought of as financial policy'
 ---
-__This is the first in the series of essays in which we discuss our thinking behind governance tokens from people in the frontlines of building them out. ValorizeDAO is a community of people building out governance token standards and a platform for people to launch them with no code. Find out more at [Valorize](https://www.valorize.app)__
+
+**This is the first in the series of essays in which we discuss our thinking behind governance tokens from people in the frontlines of building them out. ValorizeDAO is a community of people building out governance token standards and a platform for people to launch them with no code. Find out more at [Valorizes](https://www.valorize.app)**
 
 [Here is an interview](https://www.youtube.com/watch?v=pvRUlaC3SAE) and discussion about Valorize and this article
 
@@ -20,9 +21,7 @@ Weighted voting is a system that allows for actors in a system to signal (and au
 There are three main reasons that token voting is so problematic today:
 
 - We are designing governance structures as though they are monetary policies
-
 - The monetary policies we use for governance tokens are prioritizing the stability of price, while governance should prioritize signaling the amount of value that a contributor has given to a community
-
 - Removing the priority we give towards unit price enables better governance primitives
 
 Governance Policy is not Monetary Policy.
@@ -33,19 +32,17 @@ However, if you take a moment to look at the governance policy of some of the mo
 Taking the ENS DAO which you can find in this link. Don't worry if you can't read code, I will explain what is happening here.
 
 (This is simplified to only show the things to do with the token issuance)
-<div class="flex justify-center">
-  <img class="mx-auto" src="/images/bttvg_1.png" alt="A sample storage for a smart contract">
-</div>
+
+![A sample storage for a smart contract](/images/bttvg_1.png)
 
 And further down we can see the mint function:
-<div class="flex justify-center">
-  <img class="mx-auto" src="/images/bttvg_2.png" alt="A sample mint function">
-</div>
 
+![A sample mint function](/images/bttvg_2.png)
 
 The summary is that on launch, there is an initial supply of 100,000,000 tokens, and every year, the supply can be increased at a rate of 2%. I don't know where this idea came from, but I would venture to assume that it came from the 2% marker that central banks give as an ideal rate for a country's monetary supply. The reasons banks have for doing so are that it encourages spending by individuals, keeps interest rates stable, and leaves room to be managed in an economic downturn. The merits of their argument should be evaluated on the metrics they propose, but the question is this: are those the metrics we need to evaluate when discussing governance models?
 
 ### Governance Should Prioritize Contributors' Value at a Given Snapshot in Time
+
 So if we accept that prioritizing interest rates, consumer spending, and managing economic downturns might not be the best thing to prioritize for governance, what then should we be prioritizing? I have a proposal for that, which is to make governance tokens a signal of the value given by a member to a community.
 
 Current models for tokens are a mixture between something 'like' equities, and something 'like' money. However, they are kind of bad at both. A corollary for governance tokens might be Voting Shares in a corporation which are useful because people that are more 'invested' in a company have more of a say, and if you control more than half of a corporation's equity, you are effectively in charge of making decisions for that corporation. The thing about equity shares with voting power is that they are usually accompanied by some sort of dividend agreement which can be modified to achieve certain outcomes like monetary premium. As opposed to governance tokens, which do not traditionally provide dividends, however, are often used as the form of payment by the parent organization to their contributors.
@@ -57,6 +54,7 @@ However, when governance tokens are often used as payment to members, what many 
 In an ideal scenario, the tokens are distributed proportionately to the people that have contributed in a way that signals the value of that contribution. And then the question arises, how do you measure that value so it is accurately represented over a period of time? Now equities generally operate in a manner that disproportionately values early contributors through SAFE notes and vesting schedules. SAFE notes give organizations much more flexibility, but once an equity is issued, the only way to dilute earlier investors is to buy them out. Equity might be better understood as a measure of the financial risk taken by early investors and contributors as opposed to the measure of the value of their contributions. This property is questionable when designing a token voting system.
 
 ### Unit Price vs Weighted Voting
+
 Let's design a governance token that is good at capturing current contribution value of members and ignore the unit price of a token for a second. This token will not be too complex in its functionality, the things we want to focus on is initial supply, maximum supply, and yearly increase in supply (inaccurately referred to as inflation rates in the world of tokens). Because we want to focus on providing governance rights to this token, we want to constantly give the token to the people that are providing value to the community. The mechanics of how that is measured are non-trivial, but we will make the massive assumption that it is measured correctly. The hope is that once a vote happens, the outcome will be representative of the wishes of the most valuable community members.
 
 What should be the initial supply? This question is almost irrelevant. The real question is how is the supply distributed. The initial supply should only really be large enough so that the ratio of the contributors can accurately be described. That is, you don't want 10 tokens divided by 13 people evenly, unless you have sufficient divisibility per unit.
