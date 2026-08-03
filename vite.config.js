@@ -56,6 +56,26 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
             src: 'well-known/nostr.json',
             dest: '.well-known'
           },
+          {
+            src: 'images/**/*',
+            dest: 'images'
+          },
+          {
+            src: 'public/**/*',
+            dest: 'public'
+          },
+          {
+            src: 'styles/**/*',
+            dest: 'styles'
+          },
+          {
+            src: 'main.js',
+            dest: '.'
+          },
+          {
+            src: 'prism.js',
+            dest: '.'
+          },
         ]
       })
     ]
