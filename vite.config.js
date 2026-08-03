@@ -32,6 +32,11 @@ function generateInputOption() {
 export default defineConfig(({ command, mode, ssrBuild }) => {
   return {
     root: '_site',
+    server: {
+      host: true,
+      port: 5178,
+      strictPort: true,
+    },
     build: {
       outDir: '../dist',
       rollupOptions: {
