@@ -10,6 +10,7 @@
 {% if meta.title %}
   {% assign page_title = meta.title %}
 {% endif %}
+{% if node.env == 'production' %}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z2KR66FYB"></script>
 <script>
@@ -19,6 +20,7 @@
 
   gtag('config', 'G-6Z2KR66FYB');
 </script>
+{% endif %}
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

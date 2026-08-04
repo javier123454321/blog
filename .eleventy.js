@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/styles');
   eleventyConfig.addPassthroughCopy('./src/well-known');
   eleventyConfig.addPassthroughCopy('./src/main.js');
+  eleventyConfig.addPassthroughCopy('./src/analytics.js');
   eleventyConfig.addPassthroughCopy('./src/prism.js');
   return {
     dir: {

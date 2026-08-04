@@ -1,12 +1,17 @@
 import './styles/main.css';
 
 import Alpine from 'alpinejs';
+import { initAnalytics } from './analytics';
 
 window.Alpine = Alpine;
 
 Alpine.start();
 
 const env = document.querySelector('body').dataset.env;
+
+if (env === 'production') {
+  initAnalytics();
+}
 
 // Check that service workers are supported
 if ('serviceWorker' in navigator && env === 'production') {
