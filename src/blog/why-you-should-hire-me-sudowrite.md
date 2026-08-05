@@ -68,7 +68,7 @@ Our team is focused on performance and stability, and we've been able to keep ou
 
 I also built Valorize, a company to launch your own tokens on Ethereum. I worked on it for a few years, wrote some articles that landed on the first page of Google when you searched for gas optimizations, and designed some cool primitives for artists to get paid royalties on the NFTs they were creating. The story of how I left is another few pages.
 
-Oh — I've also built a residential house, redesigned a manual to help thousands of volunteers build 180 emergency relief shelters, built a tool for surfacing learning resources, a tool for transcribing music by ear, a company for selling pictures to people in restaurants that reached $5,000 MRR, and my own CMS on top of Eleventy, apparently.
+Oh — I've also built a residential house, redesigned a manual to help thousands of volunteers build 180 emergency relief shelters, built a tool for surfacing learning resources, a tool for transcribing music by ear, a company for selling pictures to people in restaurants that reached $5,000 MRR, and my own CMS on top of Eleventy.<a name="ref2"></a>[<sup>2</sup>](#note2)
 
 ## The Last Chapter
 
@@ -97,3 +97,5 @@ If you made it here, thank you. I'll leave my resume and take this as a cover le
 ---
 
 <a name="note1">**1.**</a> I could get into the greatest learning I've had from Buddhism — that putting joyful effort into helping others, into building things, is a way to go beyond your limits — but that's another essay. [[Back]](#ref1)
+
+<a name="note2">**2.**</a> I vibe coded this blog editor myself — [here's the first post about how that went](/blog/on-vibecode). It's directly relevant to what you're building at Sudowrite. [[Back]](#ref2)
