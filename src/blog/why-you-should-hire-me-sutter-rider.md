@@ -89,7 +89,10 @@ If you made it here, thank you. I'll leave my resume and take this as a cover le
 - [The Distributed Ontological Frontline](/blog/reality-just-aint-what-it-used-to-be)
 
 ### Resume
-- [Software Developer Resume (PDF)](/resume.pdf)
+
+<div class="mx-auto max-w-2xl p-8">
+{% render "partials/components/pdf-embed.liquid", url: '/resume.pdf', name: 'Javier Gonzalez - Software Developer Resume' %}
+</div>
 
 ---
 
