@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blogpost.html'
-title: 'Why You Should Hire Me for Sutter Rider'
+title: 'Why You Should Hire Me at Sudowrite'
 tags: []
 topics: ['career', 'software']
 date: '2026-08-05'
