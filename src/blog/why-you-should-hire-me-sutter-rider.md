@@ -89,6 +89,7 @@ If you made it here, thank you. I'll leave my resume and take this as a cover le
 - [The Distributed Ontological Frontline](/blog/reality-just-aint-what-it-used-to-be)
 
 ### Resume
+- [Software Developer Resume (PDF)](/resume.pdf)
 
 ---
 
