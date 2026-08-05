@@ -6,7 +6,7 @@ topics: ['career', 'software']
 date: '2026-08-05'
 unlisted: true
 meta:
-  desc: "A cover letter for Sutter Rider — why I'm the right hire."
+  desc: "A cover letter for Sudowrite — why I'm the right hire."
 ---
 
 Hi James, I'm Javier, your next full-stack developer.
