@@ -12,7 +12,7 @@ intro:
   <div class="{{ width }}">
     <ul class="grid grid-cols-1 gap-8 justify-around">
       {%- for post in collections.all reversed -%}
-        {%- unless post.data.draft -%}
+        {%- unless post.data.draft or post.data.unlisted -%}
           {% render "partials/content-card.liquid", post: post, show_tags: true %}
         {%- endunless -%}
       {%- endfor -%}
