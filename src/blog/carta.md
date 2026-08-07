@@ -44,7 +44,7 @@ Que vivimos a migajas como bohemios
    para viajar a todos los lugares que pudimos. 
 
 Que le dije a mi madre a los meses de conocerte,  
-  lo que supe a momentos de conocerte, que quise  
+   lo que supe a momentos de conocerte, que quise  
    y que quiero que seas mi esposa y que te pedí  
    la mano saliendo de ver una obra de teatro basada en el principito.
 
@@ -74,9 +74,9 @@ Que seguimos viajando y construyendo una vida
    pero es de los lugares que más he disfrutado  
    y que nuestra canícula de amistades es como ninguna otra.
 
-Que tu piel es menos firme ya que llegaste 
-   a los jóvenes 30 pero eres más bella que nunca
-   porque ese físico está atado a la mujer 
+Que tu piel es menos firme ya que llegaste  
+   a los jóvenes 30 pero eres más bella que nunca  
+   porque ese físico está atado a la mujer  
    que ahora es la que ha entrelazado su historia con la mía  
    y es familia y forma parte de mi ser  
    y el amor que hacemos ahora es emocionante  
