@@ -15,6 +15,3 @@ report.html
 # cache
 .eslintcache
 .stylelintcache
-
-# Local Netlify folder
-.netlify

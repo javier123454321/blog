@@ -1,7 +1,6 @@
 # 📦 11st-Starter-Kit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ec6da587-72ba-490a-ad4b-167802a9c197/deploy-status)](https://app.netlify.com/sites/11st-starter-kit/deploys)
 
 [11ty](https://www.11ty.dev/), powered by [Vite](https://vitejs.dev/)
 with [Tailwind CSS](https://tailwindcss.com) and
@@ -42,23 +41,15 @@ Open http://localhost:5000/ to view it in your browser.
 
 Your code is now ready to be deployed!
 
-## Netlify
+## Cloudflare Pages
 
-To get your own instance of this 11st-Starter-Kit cloned and deploying to
-Netlify very quickly, just click the button below and follow the instructions.
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" />](https://app.netlify.com/start/deploy?repository=https://github.com/stefanfrede/11st-starter-kit)
-
-### Add some Netlify helpers
-
-Netlify Dev adds the ability to use Netlify redirects, proxies, and serverless functions.
+The site is deployed to [Cloudflare Pages](https://developers.cloudflare.com/pages/)
+(direct upload via Wrangler). Response headers are set by the
+`functions/_middleware.js` Pages Function.
 
 ```bash
-# install the Netlify CLI in order to get netlify dev
-npm install -g netlify-cli
-
-# run a local server with some added Netlify sugar
-netlify dev
+# build, then deploy to production
+npm run build && npx wrangler pages deploy dist --project-name javiergonzalez
 ```
 
 ## Code Quality

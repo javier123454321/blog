@@ -8,7 +8,6 @@
     "eleventy",
     "jamstack",
     "liquidjs",
-    "netlify",
     "pwa",
     "tailwindcss",
     "vite"
@@ -29,7 +28,6 @@
     "dev:eleventy": "npx @11ty/eleventy --incremental --watch",
     "dev:vite": "npx vite",
     "prebuild": "run-s clean",
-    "deploy:preview": "npm run build && npx netlify deploy --dir dist --no-build",
     "build": "cross-env NODE_ENV=production run-s build:*",
     "build:eleventy": "npx @11ty/eleventy",
     "build:vite": "npx vite build",
@@ -65,7 +63,6 @@
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "netlify-cli": "^22.4.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.14",
     "postcss-cli": "^10.0.0",
