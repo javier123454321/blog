@@ -5,22 +5,20 @@ tags: ['main', 'tech', 'ai']
 topics: ['artificial intelligence']
 date: '2026-09-20'
 meta:
-  desc: "On the limits of long running agents: low resolution prompts, filled in assumptions, and why thorough planning still matters."
+  desc: "On the limits of long running agents: low resolution prompts, filled in assumptions, and why thorough planning is not enough."
 intro:
-  text: "I have been working on the Wiser Learning app through a couple of rewrites. I want to talk about the limit that I am seeing with long running agents."
+  text: "I have been working on https://wiserlearningapp.com through a couple of rewrites. The problem to be solved for agentic loops is that there necessarily is a level of assumption of intent that happens when giving general instructions that should produce specific instructions."
 ---
 
 ## Long Running Agents and the Assumption Problem
 
-Going into AI, I first wrote about the first time I gave a long running task to an agent and saw success with it.
+My journey with agentic engineering has happened in two phases. I first [wrote about the first time I gave a long running task to an agent](/blog/on-vibecode) and saw success with it. Then I realized how to [leverage tools to build guardrails](/blog/from-vibecoding-to-engineering) that can execute long running instructions in a more deterministic way. My main argument was that you have to provide the LLM deterministic tools, linting tools, offload of the thinking process, and break down the tasks. Then you can get something done.
 
-I wrote about creating a lever and harness that can execute long running instructions in a more deterministic way. My main argument was that you have to provide the LLM deterministic tools, linting tools, offload of the thinking process, and break down the tasks. Then you can get something done.
+I have been working on the [Wiser Learning app](https://wiserlearningapp.com) for some time now. Each time I keep getting more amazed, and I have gone through a couple of rewrites. I want to talk about the limit that I am seeing for this.
 
-I have been working on the Wiser Learning app for some time now. Each time I keep getting more amazed, and I have gone through a couple of rewrites. I want to talk about the limit that I am seeing for this.
+I do not have a long running agent. I do not have a self improving code base that is looking at customer data. I am completely in the loop for all of that. I am driving the architecture. I am the person giving the prompts, and I am basically uninterested in removing myself from being that guy. At this point I want to be the driver (and I cannot afford simply running agents constantly forever, and agents verifying the work of the other agents, and agents gauging the verified work, etc) forever. I have however found myself looking less at the output that these agents produce.
 
-I do not have a long running agent. I do not have a self improving code base that is looking at customer data. I am completely in the loop for all of that. I am driving the architecture. I am the person giving the prompts, and I am basically uninterested in removing myself from being that guy. At this point I want to be the driver (and I cannot afford simply running agents constantly forever, and agents verifying the work of the other agents, and agents qaing the verified work, etc).
-
-The biggest issue I see when giving a prompt to an AI, any prompt, is that by design there is an information theoretical problem. You cannot decompress a set of instructions from low resolution to high resolution. It is possible you could do that from high resolution to low resolution. That is what compression algorithms do. That is what programming languages are. Going from low resolution to high resolution is by definition a process that requires filling in gaps and assumptions. There is an inherent problem that LLMs cannot solve. The instructions you give to the LLM are going to have some level of ambiguity. That level of ambiguity is necessarily going to have to be filled in with assumptions. So you **build a plan.** That might look like:
+The biggest issue I see when giving a prompt to an AI, any prompt, is that by design there is an information theoretical problem. You cannot decompress a set of instructions from low resolution to high resolution. You can absolutely do that from high resolution to low resolution. That is what compression algorithms do. That is what programming languages are. Going from low to high resolution, however, is by definition a process that requires filling in gaps and assumptions. And this happens to be a problem that LLMs do not solve well a lot of the time. The instructions you give to the LLM are going to have some level of ambiguity. That level of ambiguity is necessarily going to have to be filled in with assumptions. So the first step is that you **build a plan.** That might look like:
 
 ![](/images/screenshot-2026-09-20_22-14-23.png)
 
@@ -28,11 +26,11 @@ LLMs are very bad, sometimes decent but mostly very bad, at filling in those ass
 
 Even the good models have this issue, and the only real solution I have found is to follow this loop:
 
-1. plan thoroughly 
+1. plan thoroughly
 2. build it
 3. then refine after building, undoing a good 30% of the work
 
-If you are not going to be looking at the code, you can catch these assumptions at the level of the code, or essentially have the agent plan with code snippets and suggestions in the planning document, but that requires a back and forth that I am not sure if that is adding a lot of efficiency.
+If you are not going to be looking at the code, you can catch these assumptions at the level of the plan, or essentially have the agent plan with code snippets and suggestions in the planning document, but that requires a back and forth that I am not sure if that is adding a lot of efficiency.
 
 If you want to get to the promised efficiency of LLM programming, where you can go from idea to outcome much faster, you basically have to forgo some level of decision making to the model. You have to let the model assume some of the decisions that you are not being explicit about.
 
@@ -52,4 +50,18 @@ It is much closer to the life cycle of how a human product manager communicates 
 
 ![](/images/screenshot-2026-09-20_22-34-00.png)
 
-So when we say that the LLMs are replacing developers, what are we actually saying? Because this issue is fractal, and the information loss is at every level. As a dev you have to do this on a technical level, and we are fostering a culture of not really seeing the output. So these assumptions get baked in.
+The above works, and it works decently, but it needs to happen in a much faster and smaller cycle. So the process is at every step to go through some level of this loop, because the information is lossy at every step. So the actual loop looks like this:
+
+![](/images/screenshot-2026-09-21_14-54-21.png)
+
+
+
+So this process, of course gated by the stuff I wrote in my prior blogposts<a name="ref1">[(1)](#note1)</a> has been the only way to get "deterministic" solutions out of the LLM coding loop. And deterministic is a bad name for it because what actually happens is that the non determinism creates a loop with a bad outcome, and then you fix it, and continue at every scale until you are done. I think people call this loop engineering or something, and I am not too interested in the trendy name. What I am interested is the results that I can guarantee.
+
+## Conclusions
+
+As I am writing this, I am seeing others talk about similar things. [A16z has a great article](https://a16z.com/product-management-is-still-all-about-telling-stories/) where they are saying that now the prototype can and should come as one of the first intermediate steps to validate the idea, because it is now so cheap to do. I like this approach, and it matches what I have been doing. Make the assumptions explicit because the only way to merge your understanding from the prompt to what the model is outputting is just to see what the outcome of the model's understanding is. And you should do that at every step.
+
+## **Notes**
+
+<a name="note1">**1.**</a> Again, this post assumes the things I started speaking about in [Treating Vibecoding Like Engineering](/blog/from-vibecoding-to-engineering). [\[Back\]](#ref1)
